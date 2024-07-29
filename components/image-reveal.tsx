@@ -47,7 +47,7 @@ const ImageReveal = ({ src }: ImageRevealProps) => {
         ref={imageRef}
         src={src}
         alt="Reveal"
-        className="object-cover w-full h-full"
+        className="object-cover w-full h-full rounded-lg"
       />
     </div>
   );

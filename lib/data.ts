@@ -109,7 +109,7 @@ export const experiences = [
 
 export const projects = [
   {
-    title: "React Native Mobile App - Final Year Project",
+    title: "React Native Mobile App - Final Degree Project",
     type: "E-commerce Mobile App",
     number: 1,
     description: "Stock Mart Lanka is a Sri Lankan Export and Import Cake Essential Item Store.",
@@ -130,6 +130,33 @@ export const projects = [
     title: "Dunes Cart - Admin Dashboard",
     type: "E-commerce Website",
     number: 3,
+    description: "Dunes Cart Admin Dashboard",
+    tags: ["Design", "Development", "2024"],
+    imageUrl: "/images/projects/dunescart-admin.webp",
+    link: "https://dunescart-admin.vercel.app/",
+  },
+  {
+    title: "Dunes Cart - Website",
+    type: "E-commerce Website",
+    number: 4,
+    description: "Dunes Cart Ecommerce Website",
+    tags: ["Design", "Development", "2024"],
+    imageUrl: "/images/projects/dunescart.webp",
+    link: "https://dunescart-store.vercel.app/",
+  },
+  {
+    title: "Dunes Cart - Admin Dashboard",
+    type: "E-commerce Website",
+    number: 5,
+    description: "Dunes Cart Admin Dashboard",
+    tags: ["Design", "Development", "2024"],
+    imageUrl: "/images/projects/dunescart-admin.webp",
+    link: "https://dunescart-admin.vercel.app/",
+  },
+  {
+    title: "Dunes Cart - Admin Dashboard",
+    type: "E-commerce Website",
+    number: 5,
     description: "Dunes Cart Admin Dashboard",
     tags: ["Design", "Development", "2024"],
     imageUrl: "/images/projects/dunescart-admin.webp",

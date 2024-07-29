@@ -27,6 +27,18 @@ const config = {
       },
     },
     extend: {
+      width: {
+        '30': '30%', // Custom width class for 30%
+      },
+      backgroundColor: {
+        'custom-rgba': 'rgba(24, 34, 57, 0.83)', // Custom background color
+      },
+      padding: {
+        '13px': '13px', // Custom padding
+      },
+      minHeight: {
+        '375px': '375px', // Custom minimum height
+      },
       fontFamily: {
         barlow: "Barlow",
       },
@@ -72,6 +84,7 @@ const config = {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+        '12px': '12px', 
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

@@ -30,7 +30,7 @@ const ProjectInfo = ({ project }: { project: ProjectTypes }) => {
         <div className="relative aspect-video w-full">
           <ImageReveal src={project.imageUrl} />
         </div>
-        <div className="flex flex-col sm:flex-row items-start gap-2 sm:items-center sm:justify-between">
+        <div className="flex flex-col items-start gap-2 sm:items-start sm:justify-between">
           <div className="mt-4">
             <p className="text-sm text-neutral-500 dark:text-neutral-400">
               {project.type}
