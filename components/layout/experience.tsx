@@ -12,11 +12,11 @@ import { useTheme } from "next-themes";
 import { experiences } from "@/lib/data";
 
 export default function Experience() {
-  const { ref } = useSectionInView("Experience");
+  const { ref } = useSectionInView("Qualification");
 
   return (
     <section id="experience" ref={ref} className="scroll-mt-28 mb-28 sm:mb-40">
-      <SectionHeading>My Experiences & Educations</SectionHeading>
+      <SectionHeading>Experiences & Educations</SectionHeading>
       <VerticalTimeline lineColor="" className="overflow-hidden">
         {experiences.map((item, index) => {
           return <TimelineElement key={index} item={item} />;
@@ -41,7 +41,8 @@ function TimelineElement({ item }: { item: any }) {
           boxShadow: "none",
           border: "1px solid rgba(0, 0, 0, 0.05)",
           textAlign: "left",
-          padding: "1.3rem 2rem",
+          padding: "1.2rem 2rem",
+
         }}
         contentArrowStyle={{
           borderRight:

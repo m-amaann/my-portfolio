@@ -7,6 +7,9 @@ import ContactFormEmail from "@/email/contact-form-email";
 const resend = new Resend(process.env.RESEND_API_KEY as string);
 
 export const sendEmail = async (values: { email: string; message: string }) => {
+  console.log("Sending email with values:", values);
+  console.log("Using Resend API key:", process.env.RESEND_API_KEY);
+
   let data;
   try {
     data = await resend.emails.send({
@@ -20,11 +23,12 @@ export const sendEmail = async (values: { email: string; message: string }) => {
       }),
     });
   } catch (error) {
+    console.error("Error sending email:", getErrorMessage(error));
     return {
       error: getErrorMessage(error),
     };
   }
-
+  console.log("Email sent successfully:", data);
   return {
     data,
   };

@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
@@ -11,14 +12,11 @@ export default function Preloader() {
     setDimension({ width: window.innerWidth, height: window.innerHeight });
   }, []);
 
-  const initialPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${
-    dimension.height
-  } Q${dimension.width / 2} ${dimension.height + 300} 0 ${
-    dimension.height
-  }  L0 0`;
-  const targetPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${
-    dimension.height
-  } Q${dimension.width / 2} ${dimension.height} 0 ${dimension.height}  L0 0`;
+  const initialPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${dimension.height
+    } Q${dimension.width / 2} ${dimension.height + 300} 0 ${dimension.height
+    }  L0 0`;
+  const targetPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${dimension.height
+    } Q${dimension.width / 2} ${dimension.height} 0 ${dimension.height}  L0 0`;
 
   const curve = {
     initial: {
@@ -40,7 +38,12 @@ export default function Preloader() {
     >
       {dimension.width > 0 && (
         <>
-          <div className="absolute z-10 text-2xl sm:text-4xl font-bold text-white">
+          <div className="flex flex-row absolute z-10 text-2xl sm:text-4xl font-bold text-white">
+            <motion.img
+              className="w-10 h-10 sm:w-14 sm:h-14"
+              src="/images/logo/logo.png"
+              alt="logo"
+            />
             <motion.p
               variants={preloaderSlide}
               initial="hidden"
@@ -49,7 +52,7 @@ export default function Preloader() {
               custom={0}
               className="mb-1 sm:mb-2"
             >
-              Niamat Marjan
+              Mohamed Amaan
             </motion.p>
             <motion.div
               variants={preloaderSlide}
@@ -59,7 +62,8 @@ export default function Preloader() {
               custom={1}
               className="flex items-center gap-2 sm:gap-3 text-cmaccent"
             >
-              <Copyright className="w-6 h-6 sm:w-9 sm:h-9" /> Folio 2024
+
+
             </motion.div>
           </div>
 

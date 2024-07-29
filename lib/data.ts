@@ -3,6 +3,8 @@ import { CgWorkAlt } from "react-icons/cg";
 import { LuGraduationCap } from "react-icons/lu";
 import { ProjectTypes } from "./types";
 
+// import { HarritLogo } from "../components/harrit-logo";
+
 export const links = [
   {
     name: "Home",
@@ -21,7 +23,7 @@ export const links = [
     hash: "#skills",
   },
   {
-    name: "Experience",
+    name: "Qualification",
     hash: "#experience",
   },
   {
@@ -32,7 +34,7 @@ export const links = [
 
 export const aboutMe = {
   longDesc:
-    "Innovate as Full Stack Engineer and self driven individual, aspiring to explore new horizons in the field of IT with an appetite for web & mobile My expertise lies in crafting dynamic, engaging interfaces through writing clean and utilizing cutting-edge development tools and techniques. I am also a team player who thrives in collaborating with cross-functional teams  produce outstanding  applications.",
+    'As a Full Stack Engineer with 1.5 years of working experience, I am a self-driven individual with a passion for exploring new horizons in the IT field. My expertise lies in crafting dynamic and engaging interfaces through writing clean code and utilizing cutting-edge development tools and techniques. With a strong foundation in both web and mobile development, I excel at creating user-centric applications that deliver seamless experiences.',
   shortDesc:
     "I bring creativity and technical expertise to every project.",
   favFont: "Barlow",
@@ -43,36 +45,48 @@ export const aboutMe = {
 
 export const experiences = [
   {
-    title: "Full Stack Developer at Harriet (Pvt) ltd",
+    title: "Full Stack Developer Intern at Harriet (Pvt) Ltd",
     location: "Colombo 07, Sri Lanka",
-  
-    description:'wejskjksdjvksdvcjskcvjds wvnsdjnkrj ervo ovonn ro 3rosdorojj jiv3rjvo io',
+    description: 'Worked on a variety of projects including...',
     icon: React.createElement(CgWorkAlt),
     date: "Feb 2024 - Present",
   },
   {
-    title: "Web Developer at ZRI Adventures (Pvt) Ltd",
+    title: "BEng in Software Engineering ",
     location: "Colombo, Sri Lanka",
-    // description:'',
-    icon: React.createElement(CgWorkAlt),
-    date: "Sept 2023 - Present",
+    institute: "London Metropolitan University (UK)",
+    icon: React.createElement(LuGraduationCap),
+    date: "Feb 2021 - Jan 2024",
   },
   {
-    title: "Software Engineer Intern at WSO2",
-    location: "Colombo, Sri Lanka",
+    title: "UI/UX & Frontend Developer at Freelancer",
+    location: "Type: Remote",
+    type: "Part Time",
+    description: 'Designed and developed user interfaces...',
     icon: React.createElement(CgWorkAlt),
-    date: "2022 - 2023",
+    date: "Oct 2021 - Present",
   },
+  {
+    title: "Data Entry Analysis at Aegis Lanka (Pvt) Ltd",
+    location: "Colombo 02, Sri Lanka",
+    description: 'Conducted data entry and analysis tasks...',
+    icon: React.createElement(CgWorkAlt),
+    date: "Jan 2020 - July 2020",
+  },
+] as const;
+
+export const education = [
   {
     title: "Bsc (Hons) in Computer Science",
     location: "Colombo, Sri Lanka",
+    institute: "University of Colombo",
     icon: React.createElement(LuGraduationCap),
-    date: "2021 - 2024",
+    date: "2021 Feb - 2024 Jan",
   },
   {
     title: "Ordinary Level and Advanced Level",
     location: "Colombo, Sri Lanka",
-    description: "",
+    institute: "Colombo School",
     icon: React.createElement(LuGraduationCap),
     date: "2016-2020",
   },

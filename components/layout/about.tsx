@@ -5,7 +5,7 @@ import ColorCard from "../color-card";
 import Handwritten from "../ui/handwritten";
 import { aboutMe } from "@/lib/data";
 import { useSectionInView } from "@/hooks/useSection";
-import { opacity, slideLeft, slideUp } from "@/lib/anim";
+import { opacity, slideUp } from "@/lib/anim";
 
 export default function About() {
   const phrase = aboutMe.longDesc;
@@ -16,6 +16,7 @@ export default function About() {
   const isInViewUI = useInView(aboutUI);
 
   const { ref } = useSectionInView("About");
+
   return (
     <motion.section
       ref={ref}
@@ -28,7 +29,7 @@ export default function About() {
       <SectionHeading>About Me</SectionHeading>
       <div ref={description}>
         <div className="relative flex flex-col items-center gap-12 mt-12 lg:items-start lg:flex-row">
-          <p className="gap-2 m-0 leading-10 text-lg sm:text-2xl md:text-3xl">
+          <p className="gap-2 m-0 leading-10 text-lg sm:text-xl md:text-2xl lg:text-3xl">
             {phrase.split(" ").map((word, index) => {
               return (
                 <span
@@ -57,7 +58,6 @@ export default function About() {
           </motion.p>
         </div>
       </div>
-
     </motion.section>
   );
 }
