@@ -30,8 +30,8 @@ export default function Projects() {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="w-30 m-1 !mt-0 mb-6 bg-custom-rgba p-13px rounded-12px min-h-375px"
-            >
+              className="w-full sm:w-30 m-1 !mt-0 mb-6 bg-custom-rgba p-13px rounded-12px min-h-375px"
+              >
               <ProjectInfo project={project} />
             </div>
           ))}
