@@ -46,8 +46,11 @@ export const aboutMe = {
 export const experiences = [
   {
     title: "Full Stack Developer Intern at Harriet (Pvt) Ltd",
+    Company: "Harriet",
+    type: "Full Time",
     location: "Colombo 07, Sri Lanka",
     description: 'Worked on a variety of projects including...',
+    technology: "React, Node.js, Express.js, MongoDB, Next.js, Git, Gitlab, Gitpod, Gitpod.io",
     icon: React.createElement(CgWorkAlt),
     date: "Feb 2024 - Present",
   },
@@ -56,51 +59,63 @@ export const experiences = [
     location: "Colombo, Sri Lanka",
     institute: "London Metropolitan University (UK)",
     icon: React.createElement(LuGraduationCap),
-    date: "Feb 2021 - Jan 2024",
+    date: "Feb 2020 - Jan 2024",
   },
   {
-    title: "UI/UX & Frontend Developer at Freelancer",
-    location: "Type: Remote",
+    title: "UI/UX Designer at Freelancer",
+    Company: "Freelancer.com",
+    location: "Remote",
     type: "Part Time",
     description: 'Designed and developed user interfaces...',
+    technology: "Figma, Adobe XD",
     icon: React.createElement(CgWorkAlt),
     date: "Oct 2021 - Present",
   },
   {
-    title: "Data Entry Analysis at Aegis Lanka (Pvt) Ltd",
-    location: "Colombo 02, Sri Lanka",
-    description: 'Conducted data entry and analysis tasks...',
-    icon: React.createElement(CgWorkAlt),
-    date: "Jan 2020 - July 2020",
-  },
-] as const;
-
-export const education = [
-  {
-    title: "Bsc (Hons) in Computer Science",
+    title: "Higher Naional Diploma in Software Engineering",
     location: "Colombo, Sri Lanka",
-    institute: "University of Colombo",
+    institute: "BTEC Pearson (UK)",
     icon: React.createElement(LuGraduationCap),
-    date: "2021 Feb - 2024 Jan",
+    date: "Jan 2021 - Sep 2022",
+  },
+  {
+    title: "Data Entry Operator",
+    Company: "Aegis Lanka (Pvt) Ltd",
+    location: "Colombo 02, Sri Lanka",
+    type: "Full-Time",
+    description: 'Daily task enter personal data...',
+    technology: "Figma, Adobe XD",
+    icon: React.createElement(CgWorkAlt),
+    date: "Oct 2021 - Present",
   },
   {
     title: "Ordinary Level and Advanced Level",
-    location: "Colombo, Sri Lanka",
-    institute: "Colombo School",
+    location: "Colombo 07, Sri Lanka",
+    institute: 'Royal College',
     icon: React.createElement(LuGraduationCap),
-    date: "2016-2020",
+    date: "Jan 2007 - Nov 2019",
+  },
+  {
+    title: "Diploma in Information Technology",
+    location: "Colombo, Sri Lanka",
+    institute: "ESOFT Metro Campus",
+    icon: React.createElement(LuGraduationCap),
+    date: "Jan 2019 - Sep 2019",
   },
 ] as const;
 
+
+
+
 export const projects = [
   {
-    title: "ZRI Adventures",
-    type: "E-commerce Website",
+    title: "React Native Mobile App - Final Year Project",
+    type: "E-commerce Mobile App",
     number: 1,
-    description: "ZRI Adventures is a Sri Lankan adventure agency.",
-    tags: ["Design", "Development", "2023"],
-    imageUrl: "/images/projects/zriadventures.webp",
-    link: "https://zriadventures.com",
+    description: "Stock Mart Lanka is a Sri Lankan Export and Import Cake Essential Item Store.",
+    tags: ["Design", "Development", "2023 - Nov"],
+    imageUrl: "/images/projects/Final project Mobile.png",
+    link: "https://github.com/m-amaann/Final-Mobile-App",
   },
   {
     title: "Dunes Cart - Website",

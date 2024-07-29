@@ -40,6 +40,9 @@ export default function Preloader() {
         <>
           <div className="flex flex-row absolute z-10 text-2xl sm:text-4xl font-bold text-white">
             <motion.img
+              variants={preloaderSlide}
+              initial="hidden"
+              animate="open"
               className="w-10 h-10 sm:w-14 sm:h-14"
               src="/images/logo/logo.png"
               alt="logo"
