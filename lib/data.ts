@@ -109,7 +109,7 @@ export const experiences = [
 
 export const projects = [
   {
-    title: "React Native Mobile App - Final Degree Project",
+    title: "React Native Mobile App - Final Year Project",
     type: "E-commerce Mobile App",
     number: 1,
     description: "Stock Mart Lanka is a Sri Lankan Export and Import Cake Essential Item Store.",

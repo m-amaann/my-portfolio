@@ -2,7 +2,6 @@ import { useProjectStore } from "@/hooks/useStore";
 import { ProjectTypes } from "@/lib/types";
 import { useInView } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
-import Image from "next/image";
 import ProjectCursor from "./project-cursor";
 import ImageReveal from "./image-reveal";
 
@@ -13,35 +12,35 @@ const ProjectInfo = ({ project }: { project: ProjectTypes }) => {
 
   const setInViewProject = useProjectStore((state) => state.setInViewProject);
   const inViewProject = useProjectStore((state) => state.inViewProject);
-
+//ts-ignore
   useEffect(() => {
     if (isInView) setInViewProject(project.number);
   }, [isInView, project.title, setInViewProject, inViewProject]);
 
   return (
-    <a href={project.link} target="_blank">
+    <a href={project.link} target="_blank" rel="noopener noreferrer">
       <div
         ref={ref}
         onMouseOver={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-        className={`${!isInView && "opacity-30"} transition-all`}
+        className={`${!isInView && "opacity-30"} transition-all overflow-hidden bg-gray-200 p-4 rounded-lg`}
+        style={{ maxHeight: "400px" }} // Set fixed height for the project card
       >
         {isHovered && <ProjectCursor />}
-        <div className="relative aspect-video w-full">
+        <div className="relative aspect-video w-full bg-gray-300 p-2 rounded-lg">
           <ImageReveal src={project.imageUrl} />
         </div>
-        <div className="flex flex-col items-start gap-2 sm:items-start sm:justify-between">
-          <div className="mt-4">
-            <p className="text-sm text-neutral-500 dark:text-neutral-400">
-              {project.type}
-            </p>
-            <p
-              className={`text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold transition-all`}
-            >
-              {project.title}
-            </p>
-          </div>
-          <div className="flex items-center gap-1 flex-wrap">
+        <div className="mt-4 overflow-y-auto" style={{ maxHeight: "200px" }}>
+          <p className="text-md sm:text-lg md:text-xl lg:text-2xl font-bold transition-all">
+            {project.title}
+          </p>
+          <p className="text-xs sm:text-sm md:text-base text-neutral-500 dark:text-neutral-400">
+            {project.type}
+          </p>
+          <p className="text-xs sm:text-sm md:text-base text-neutral-500 dark:text-neutral-400">
+            {project.description}
+          </p>
+          <div className="flex flex-wrap gap-2 mt-2">
             {project.tags.map((tag, index) => (
               <div
                 key={index}
@@ -49,7 +48,7 @@ const ProjectInfo = ({ project }: { project: ProjectTypes }) => {
                   project.tags.length - 1 === index
                     ? "bg-cmaccent text-cmsecondary"
                     : ""
-                } px-4 py-1 border-2 text-xs sm:text-sm lg:text-base rounded-full`}
+                } px-3 py-1 border-2 text-xs sm:text-sm rounded-full`}
               >
                 {tag}
               </div>

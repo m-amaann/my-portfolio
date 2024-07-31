@@ -218,6 +218,7 @@ export default function Intro() {
                 </motion.div>
               </div>
             </div>
+ 
             <div className="flex-col md:w-1/2 flex md:-mt-28  justify-center items-center">
               <Image
                 loading="lazy"

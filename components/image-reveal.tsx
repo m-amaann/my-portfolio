@@ -3,6 +3,7 @@ import React, { useRef } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import Image from "next/image";
 
 interface ImageRevealProps {
   src: string;
@@ -43,9 +44,10 @@ const ImageReveal = ({ src }: ImageRevealProps) => {
         className="absolute inset-0 z-10 bg-background"
         style={{ width: "100%" }}
       ></div>
-      <img
+      <Image
         ref={imageRef}
         src={src}
+        fill
         alt="Reveal"
         className="object-cover w-full h-full rounded-lg"
       />
