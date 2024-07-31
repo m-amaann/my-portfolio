@@ -219,7 +219,7 @@ export default function Intro() {
               </div>
             </div>
  
-            <div className="flex-col md:w-1/2 flex md:-mt-28  justify-center items-center">
+            <div className="flex-col md:w-1/2 flex md:-mt-28 -mt-10 justify-center items-center">
               <Image
                 loading="lazy"
                 src="/profile/profile-1.png"

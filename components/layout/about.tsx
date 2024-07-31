@@ -20,7 +20,7 @@ export default function About() {
   return (
     <motion.section
       ref={ref}
-      className="mb-24 text-center leading-8 sm:mb-40 scroll-mt-28"
+      className="mb-24 mt-8 md:mt-0 lg:mt-0 text-center leading-8 sm:mb-40 scroll-mt-28"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 3.175 }}
@@ -29,7 +29,7 @@ export default function About() {
       <SectionHeading>About Me</SectionHeading>
       <div ref={description}>
         <div className="relative flex flex-col items-center gap-12 mt-12 lg:items-start lg:flex-row">
-          <p className="gap-2 m-0 leading-10 text-lg sm:text-xl md:text-2xl lg:text-3xl">
+          <p className="gap-2 m-0 leading-10 text-lg sm:text-xl md:text-xl lg:text-2xl">
             {phrase.split(" ").map((word, index) => {
               return (
                 <span
