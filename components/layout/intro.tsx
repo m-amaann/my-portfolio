@@ -142,7 +142,7 @@ export default function Intro() {
     <section
       ref={ref}
       id="home"
-      className="h-screen relative flex flex-col md:flex-row justify-items-center justify-center items-center pt-24 md:pt-0"
+      className="h-screen relative flex flex-col md:flex-row justify-items-center justify-center items-center mt-32 md:pt-0"
     >
       <div className="flex flex-col items-center px-4 md:px-16 md:pt-20 pb-4">
         <div className="w-full  max-md:mt-10 max-md:max-w-full">
