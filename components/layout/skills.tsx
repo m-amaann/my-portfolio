@@ -1,38 +1,57 @@
 "use client";
-import React from "react";
-import SectionHeading from "../section-heading";
-import { useSectionInView } from "@/hooks/useSection";
+import { SKILLS_DATA } from '@/lib/data';
+import React from 'react';
 import { motion } from "framer-motion";
-import { skills } from "@/lib/data";
+import SectionHeading from '../section-heading';
 import { fadeInAnimationVariants } from "@/lib/anim";
+import { useSectionInView } from "@/hooks/useSection";
+import Image from 'next/image';
 
-export default function Skills() {
+const SkillsSection = () => {
   const { ref } = useSectionInView("Skills");
-
+  
   return (
-    <section
+    <section 
       id="skills"
       ref={ref}
       className="mb-28 scroll-mt-28 text-center sm:mb-40"
     >
       <SectionHeading>My Skills</SectionHeading>
-      <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
-        {skills.map((skill, index) => (
-          <motion.li
-            className="bg-white text-sm sm:text-base borderBlack rounded-xl px-5 py-3 dark:bg-white/10 dark:text-white/80"
-            key={index}
-            variants={fadeInAnimationVariants}
-            initial="initial"
-            whileInView="animate"
-            viewport={{
-              once: true,
-            }}
-            custom={index}
-          >
-            {skill}
-          </motion.li>
-        ))}
-      </ul>
+      {SKILLS_DATA.map((category, index) => (
+        <div key={index} className="mb-8 flex flex-col ">
+          <h2 className="text-base font-medium mb-4">{category.category}</h2>
+          <ul className="grid grid-cols-2 sm:grid-cols-2 justify-items-center md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-5 max-w-screen-xl mx-auto">
+            {category.skills.map((skill, idx) => (
+              <motion.li
+                key={idx}
+                className="flex items-center py-4 pl-3 bg-[#1E1E1E] border rounded-lg"
+                style={{ width: '210px' }} 
+                variants={fadeInAnimationVariants}
+                initial="initial"
+                whileInView="animate"
+                viewport={{ once: true }}
+                custom={index}
+              >
+                <div 
+                  className="flex items-center justify-center w-9 h-9 rounded-lg"
+                  style={{ backgroundColor: skill.color }} 
+                >
+                  <Image 
+                    src={skill.logo} 
+                    alt={skill.name} 
+                    className='object-contain'
+                    width={26}
+                    height={26} 
+                  />
+                </div>
+                <span className="text-sm md:text-base ml-3">{skill.name}</span>
+              </motion.li>
+            ))}
+          </ul>
+        </div>
+      ))}
     </section>
   );
-}
+};
+
+export default SkillsSection;
