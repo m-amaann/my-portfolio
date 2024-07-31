@@ -142,7 +142,7 @@ export default function Intro() {
     <section
       ref={ref}
       id="home"
-      className="h-screen relative flex flex-col md:flex-row justify-items-center justify-center items-center pt-20 md:pt-0"
+      className="h-screen relative flex flex-col md:flex-row justify-items-center justify-center items-center pt-24 md:pt-0"
     >
       <div className="flex flex-col items-center px-4 md:px-16 md:pt-20 pb-4">
         <div className="w-full  max-md:mt-10 max-md:max-w-full">
@@ -218,8 +218,9 @@ export default function Intro() {
                 </motion.div>
               </div>
             </div>
- 
-            <div className="flex-col md:w-1/2 flex md:-mt-28 -mt-10 justify-center items-center">
+            <div></div>
+            <div></div>
+            <div className="flex-col md:w-1/2 flex md:-mt-28  justify-center items-center">
               <Image
                 loading="lazy"
                 src="/profile/profile-1.png"
