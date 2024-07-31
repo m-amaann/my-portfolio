@@ -9,7 +9,7 @@ import { FaGithubSquare, FaInstagramSquare } from "react-icons/fa";
 const ContactInfo = () => {
   const ref = useRef(null);
   const isInView = useInView(ref);
-  const phrase = "Get Touch With Me 👋";
+  const phrase = "Get In Touch 👋";
   return (
     <div ref={ref}>
       <h1 className="gap-2 m-0 leading-10 text-3xl lg:text-5xl sm:text-5xl max-w-sm">

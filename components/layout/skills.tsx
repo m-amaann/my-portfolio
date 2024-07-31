@@ -24,8 +24,7 @@ const SkillsSection = () => {
             {category.skills.map((skill, idx) => (
               <motion.li
                 key={idx}
-                className="flex items-center py-4 pl-3 bg-[#1E1E1E] border rounded-lg"
-                style={{ width: '210px' }} 
+                className="flex items-center py-4 pl-3 w md:w-[210px] lg:w-[210px] bg-[#1E1E1E] border rounded-lg"
                 variants={fadeInAnimationVariants}
                 initial="initial"
                 whileInView="animate"

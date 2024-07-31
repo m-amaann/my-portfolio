@@ -196,7 +196,7 @@ export const SKILLS_DATA = [
       { name: "MySQL", logo: "/images/SKILLS/mySQL.png", color: "#ABDCF2" },
       { name: "PostgreSQL", logo: "/images/SKILLS/postgre.png", color: "#A6CDED" }, 
       { name: "Hibernate", logo: "/images/SKILLS/hibernate.png", color: "#E9DFB4" }, 
-      { name: "Java Java", logo: "/images/SKILLS/JAVA.png", color: "#CBDDFF" }, 
+      { name: "Java JPA", logo: "/images/SKILLS/JAVA.png", color: "#CBDDFF" }, 
       { name: "JDBC", logo: "/images/SKILLS/JDBC.png", color: "#D4D3CF" }, 
     ],
   },
