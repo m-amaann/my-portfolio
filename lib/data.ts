@@ -32,16 +32,7 @@ export const links = [
   },
 ] as const;
 
-export const aboutMe = {
-  longDesc:
-    'As a Full Stack Engineer with 1.5 years of working experience, I am a self-driven individual with a passion for exploring new horizons in the IT field. My expertise lies in crafting dynamic and engaging interfaces through writing clean code and utilizing cutting-edge development tools and techniques. With a strong foundation in both web and mobile development, I excel at creating user-centric applications that deliver seamless experiences.',
-  shortDesc:
-    "I bring creativity and technical expertise to every project.",
-  favFont: "Barlow",
-  primaryColor: "#030712",
-  secondaryColor: "#f3f4f6",
-  accentColor: "#4f46e5",
-} as const;
+
 
 
 
@@ -107,6 +98,7 @@ export const experiences = [
 ] as const;
 
 
+
 export const projects = [
   {
     title: "React Native Mobile App - Final Year Project",
@@ -130,7 +122,7 @@ export const projects = [
     title: "Dunes Cart Website - UI/UX Design",
     type: "E-commerce Website",
     number: 3,
-    description: "UI Design for Website",
+    description: "",
     tags: ["Design", "Development", "2024"],
     imageUrl: "/images/projects/Dunes Cart.jpg",
     link: "https://github.com/m-amaann",

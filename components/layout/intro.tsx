@@ -138,95 +138,80 @@ export default function Intro() {
     <section
       ref={ref}
       id="home"
-      className="h-screen relative flex flex-col md:flex-row justify-items-center justify-center items-center mt-18 px-4"
+      className="h-screen flex flex-col md:grid md:grid-cols-2 items-center justify-center px-2 py-12 md:py-24"
     >
-      <div className="flex flex-col items-center px-4 md:px-16 md:pt-20 pb-4">
-        <div className="w-full max-md:mt-10 max-md:max-w-full">
-          <div className="flex gap-5 max-md:flex-col">
-            <div className="flex flex-col w-full md:w-6/12 max-md:ml-0 max-md:w-full">
-              <div className="flex flex-col md:self-stretch justify-items-center my-auto max-md:max-w-full">
-                <div className="text-xl font-semibold justify-items-center dark:text-white text-black max-md:max-w-full max-md:mt-10">
-                  <span>Hi, I am 👋</span>
-                  <br />
-                  <span className="md:text-[38px] text-3xl font-bold text-[#0458AC] leading-normal tracking-wide">
-                    Mohamed Amaan
-                  </span>
-                  <br />
-                  <span className="md:text-[44px] text-3xl font-bold leading-normal tracking-wide text-black dark:text-white">
-                    Software Engineer &
-                  </span>
-                  <br />
-                  <span className="md:text-[44px] text-3xl font-bold leading-normal tracking-wide text-black dark:text-white">
-                    UX Designer
-                  </span>
-                </div>
-                <div className="mt-7 text-xl leading-normal text-gray-500 max-md:max-w-full max-md:mt-5">
-                  A self driven individual, aspiring to explore new horizons in
-                  the field of IT with an appetite for Full Stack Engineer.
-                </div>
-
-                <motion.div
-                  className="flex flex-wrap items-center gap-4 pt-4 text-lg font-medium"
-                  initial="hidden"
-                  animate="visible"
-                  variants={slideUpDesc}
-                  custom={1}
-                >
-                  <Link
-                    href="#contact"
-                    className="flex justify-center items-center gap-2 py-3 px-6 text-sm sm:text-base transition rounded-full outline-none group focus:scale-105 hover:scale-105 active:scale-105 bg-cmaccent dark:bg-cmaccent/80 text-cmsecondary hover:dark:bg-cmaccent hover:bg-cmaccent/80"
-                    onClick={() => {
-                      setActiveSection("Contact");
-                      setTimeOfLastClick(Date.now());
-                    }}
-                  >
-                    Contact Me{" "}
-                    <BsArrowRight className="transition opacity-70 group-hover:translate-x-1" />
-                  </Link>
-
-                  <a
-                    className="flex justify-center items-center gap-2 py-3 px-6 text-sm sm:text-base transition bg-white rounded-full outline-none cursor-pointer group focus:scale-105 hover:scale-105 active:scale-105 borderBlack dark:bg-white/10"
-                    href="#"
-                    download
-                  >
-                    Download CV <HiDownload className="transition opacity-60" />
-                  </a>
-
-                  <div className="flex gap-4 items-center justify-center">
-                    <a
-                      className="bg-white p-4 text-gray-700 hover:text-cmaccent flex items-center gap-2 rounded-full focus:scale-105 hover:scale-105 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-                      href="https://www.linkedin.com/in/mohamed-amaan"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <BsLinkedin className="hover:text-cmaccent transition-colors duration-100 " />
-                    </a>
-
-                    <a
-                      className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-105 hover:scale-105 hover:text-cmaccent active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-                      href="https://github.com/m-amaann"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <FaGithubSquare />
-                    </a>
-                  </div>
-                </motion.div>
-              </div>
-            </div>
-
-            <div className="flex-col md:w-1/2 flex md:-mt-28 justify-center items-center max-md:mt-10">
-              <Image
-                loading="lazy"
-                src="/profile/profile-1.png"
-                width={600}
-                height={600}
-                className="object-cover w-full h-full max-md:w-96 max-md:h-auto max-md:mt-10"
-                alt="Profile Image"
-              />
-            </div>
-          </div>
+      <div className="flex flex-col items-start md:px-16 space-y-4">
+        <div className="text-xl font-semibold dark:text-white text-black">
+          <p>Hi, I am 👋</p>
+          <h1 className="text-xl md:text-[38px] font-bold text-[#0458AC] leading-normal tracking-wide">
+            Mohamed Amaan
+          </h1>
+          <h2 className="text-2xl md:text-[44px] font-bold leading-normal tracking-wide text-black dark:text-white">
+            Software Engineer &<br /> UX Designer
+          </h2>
         </div>
+        <div className="mt-4 text-base leading-normal text-gray-500">
+          A self-driven individual, aspiring to explore new horizons in the field of IT with an appetite for Full Stack Engineering.
+        </div>
+
+        <motion.div
+          className="flex flex-wrap items-center gap-4 pt-4 text-lg font-medium"
+          initial="hidden"
+          animate="visible"
+          variants={slideUpDesc}
+          custom={1}
+        >
+          <Link
+            href="#contact"
+            className="flex justify-center items-center gap-2 py-3 px-6 text-sm sm:text-base transition rounded-full outline-none group focus:scale-105 hover:scale-105 active:scale-105 bg-cmaccent dark:bg-cmaccent/80 text-cmsecondary hover:dark:bg-cmaccent hover:bg-cmaccent/80"
+            onClick={() => {
+              setActiveSection("Contact");
+              setTimeOfLastClick(Date.now());
+            }}
+          >
+            Contact Me{" "}
+            <BsArrowRight className="transition opacity-70 group-hover:translate-x-1" />
+          </Link>
+
+          <a
+            className="flex justify-center items-center gap-2 py-3 px-6 text-sm sm:text-base transition bg-white rounded-full outline-none cursor-pointer group focus:scale-105 hover:scale-105 active:scale-105 borderBlack dark:bg-white/10"
+            href="#contact"
+            // download
+          >
+            Download CV <HiDownload className="transition opacity-60" />
+          </a>
+
+          <div className="flex gap-4 items-center justify-center">
+            <a
+              className="bg-white p-4 text-gray-700 hover:text-cmaccent flex items-center gap-2 rounded-full focus:scale-105 hover:scale-105 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+              href="https://www.linkedin.com/in/mohamed-amaan"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <BsLinkedin className="hover:text-cmaccent transition-colors duration-100 " />
+            </a>
+
+            <a
+              className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-105 hover:scale-105 hover:text-cmaccent active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+              href="https://github.com/m-amaann"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGithubSquare />
+            </a>
+          </div>
+        </motion.div>
+      </div>
+
+      <div className="flex justify-center items-center mt-4 md:mt-0">
+        <Image
+          loading="lazy"
+          src="/profile/PROFILE.png"
+          width={600}
+          height={600}
+          className="object-cover w-full h-auto md:w-96"
+          alt="Profile Image"
+        />
       </div>
     </section>
   );
