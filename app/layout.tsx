@@ -32,7 +32,7 @@ export default function RootLayout({
        <body
         className={`${barlow.className} bg-cmsecondary overflow-x-hidden text-cmprimary relative dark:bg-cmprimary dark:text-cmsecondary dark:text-opacity-90`}
       > 
-        <div className="absolute top-[-6rem] -z-10 right-[10rem] h-[40rem] w-[32rem] rounded-full blur-[12rem] dark:bg-[#263347]"></div>
+        {/* <div className="absolute top-[-6rem] -z-10 right-[10rem] h-[40rem] w-[32rem] rounded-full blur-[12rem] dark:bg-[#263347]"></div> */}
         <div className=" absolute top-[-1rem] -z-10 left-[-30rem] h-[40rem] mdLw-[55rem] rounded-full blur-[10rem] w-[20rem] md:left-[-10rem] lg:left-[-25rem] xl:left-[-12rem] 2xl:left-[-2rem] dark:bg-[#263347]"></div>
         <ScrollProvider>
           <ThemeProvider
