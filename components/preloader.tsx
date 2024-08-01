@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { preloaderSlide, preloaderSlideUp } from "@/lib/anim";
-import { Copyright } from "lucide-react";
 
 export default function Preloader() {
   const [dimension, setDimension] = useState({ width: 0, height: 0 });
@@ -47,7 +46,7 @@ export default function Preloader() {
               src="/images/logo/logo.png"
               alt="logo"
             />
-            
+            .
           </div>
 
           <svg className="absolute top-0 w-full h-[calc(100%+75rem)]">
