@@ -96,24 +96,22 @@
 //                 </motion.div>
 //               </div>
 //             </div>
-            // <div className="flex-col md:w-1/2 flex md:-mt-28 pb-10 justify-center items-center">
-            //   <Image
-            //     loading="lazy"
-            //     src="/profile/profile-1.png"
-            //     width={600}
-            //     height={600}
-            //     className="object-cover max-md:w-96 max-md:h-96 mb-16 md:mb-0"
-            //     alt="Profile Image"
-            //   />
-            // </div>
+// <div className="flex-col md:w-1/2 flex md:-mt-28 pb-10 justify-center items-center">
+//   <Image
+//     loading="lazy"
+//     src="/profile/profile-1.png"
+//     width={600}
+//     height={600}
+//     className="object-cover max-md:w-96 max-md:h-96 mb-16 md:mb-0"
+//     alt="Profile Image"
+//   />
+// </div>
 //           </div>
 //         </div>
 //       </div>
 //     </section>
 //   );
 // }
-
-
 
 
 
@@ -140,29 +138,29 @@ export default function Intro() {
     <section
       ref={ref}
       id="home"
-      className="h-screen relative flex flex-col md:flex-row justify-items-center justify-center items-center pt-28 md:pt-0 px-4"
+      className="h-screen relative flex flex-col md:flex-row justify-items-center justify-center items-center mt-18 px-4"
     >
       <div className="flex flex-col items-center px-4 md:px-16 md:pt-20 pb-4">
         <div className="w-full max-md:mt-10 max-md:max-w-full">
           <div className="flex gap-5 max-md:flex-col">
             <div className="flex flex-col w-full md:w-6/12 max-md:ml-0 max-md:w-full">
               <div className="flex flex-col md:self-stretch justify-items-center my-auto max-md:max-w-full">
-                <div className="text-xl font-semibold justify-items-center text-white max-md:max-w-full max-md:mt-10">
-                  Hi, I am 👋
+                <div className="text-xl font-semibold justify-items-center dark:text-white text-black max-md:max-w-full max-md:mt-10">
+                  <span>Hi, I am 👋</span>
                   <br />
                   <span className="md:text-[38px] text-3xl font-bold text-[#0458AC] leading-normal tracking-wide">
                     Mohamed Amaan
                   </span>
                   <br />
-                  <span className="md:text-[44px] text-3xl font-bold text-white leading-normal tracking-wide">
-                    Software Engineer <span>&</span>
+                  <span className="md:text-[44px] text-3xl font-bold leading-normal tracking-wide text-black dark:text-white">
+                    Software Engineer &
                   </span>
                   <br />
-                  <span className="md:text-[44px] text-3xl font-bold text-white leading-normal tracking-wide">
+                  <span className="md:text-[44px] text-3xl font-bold leading-normal tracking-wide text-black dark:text-white">
                     UX Designer
                   </span>
                 </div>
-                <div className="mt-7 text-xl leading-normal text-gray-500 max-md:max-w-full">
+                <div className="mt-7 text-xl leading-normal text-gray-500 max-md:max-w-full max-md:mt-5">
                   A self driven individual, aspiring to explore new horizons in
                   the field of IT with an appetite for Full Stack Engineer.
                 </div>
@@ -188,7 +186,7 @@ export default function Intro() {
 
                   <a
                     className="flex justify-center items-center gap-2 py-3 px-6 text-sm sm:text-base transition bg-white rounded-full outline-none cursor-pointer group focus:scale-105 hover:scale-105 active:scale-105 borderBlack dark:bg-white/10"
-                    href="/mohamedamaan-resume.pdf"
+                    href="#"
                     download
                   >
                     Download CV <HiDownload className="transition opacity-60" />
@@ -217,13 +215,13 @@ export default function Intro() {
               </div>
             </div>
 
-            <div className="flex-col md:w-1/2 flex md:-mt-28 justify-center items-center">
+            <div className="flex-col md:w-1/2 flex md:-mt-28 justify-center items-center max-md:mt-10">
               <Image
                 loading="lazy"
                 src="/profile/profile-1.png"
                 width={600}
                 height={600}
-                className="object-cover w-full h-full max-md:w-96 max-md:h-auto"
+                className="object-cover w-full h-full max-md:w-96 max-md:h-auto max-md:mt-10"
                 alt="Profile Image"
               />
             </div>
