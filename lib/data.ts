@@ -175,7 +175,7 @@ export const SKILLS_DATA = [
       { name: "JavaScript", logo: "/images/SKILLS/JAVASCRIPT.png", color: "#F7DF1E" },
       { name: "Flutter", logo: "/images/SKILLS/flutter.png", color: "#B9DCF9" },
       { name: "React Native", logo: "/images/SKILLS/react-native.png", color: "#0067FB" }, 
-      { name: "HTML", logo: "/images/SKILLS/html.png", color: "#F9A58E" },
+      { name: "HTML", logo: "/images/SKILLS/html.png", color: "#e2d4cd" },
       { name: "CSS", logo: "/images/SKILLS/CSS.png", color: "#63B0E9" },
       { name: "Tailwind CSS", logo: "/images/SKILLS/tailwind.png", color: "#97EFFF" },
       { name: "Bootstrap", logo: "/images/SKILLS/bootstrap.png", color: "#B496DF" },

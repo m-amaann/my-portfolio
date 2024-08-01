@@ -120,8 +120,6 @@
 
 
 
-
-
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
@@ -131,7 +129,7 @@ import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/hooks/useSection";
 import { useSection } from "@/hooks/useSection";
-import { slideUpDesc, slideUpHeading } from "@/lib/anim";
+import { slideUpDesc } from "@/lib/anim";
 import Image from "next/image";
 
 export default function Intro() {
@@ -142,10 +140,10 @@ export default function Intro() {
     <section
       ref={ref}
       id="home"
-      className="h-screen relative flex flex-col md:flex-row justify-items-center justify-center items-center mt-32 md:pt-0"
+      className="h-screen relative flex flex-col md:flex-row justify-items-center justify-center items-center pt-28 md:pt-0 px-4"
     >
       <div className="flex flex-col items-center px-4 md:px-16 md:pt-20 pb-4">
-        <div className="w-full  max-md:mt-10 max-md:max-w-full">
+        <div className="w-full max-md:mt-10 max-md:max-w-full">
           <div className="flex gap-5 max-md:flex-col">
             <div className="flex flex-col w-full md:w-6/12 max-md:ml-0 max-md:w-full">
               <div className="flex flex-col md:self-stretch justify-items-center my-auto max-md:max-w-full">
@@ -218,9 +216,8 @@ export default function Intro() {
                 </motion.div>
               </div>
             </div>
-            <div></div>
-            <div></div>
-            <div className="flex-col md:w-1/2 flex md:-mt-28  justify-center items-center">
+
+            <div className="flex-col md:w-1/2 flex md:-mt-28 justify-center items-center">
               <Image
                 loading="lazy"
                 src="/profile/profile-1.png"
@@ -236,4 +233,3 @@ export default function Intro() {
     </section>
   );
 }
-

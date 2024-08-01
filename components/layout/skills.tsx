@@ -24,7 +24,7 @@ const SkillsSection = () => {
             {category.skills.map((skill, idx) => (
               <motion.li
                 key={idx}
-                className="flex items-center md:py-4 md:px-2 lg:py-4 lg:px-2 py-2 px-2 w-[160px] md:w-[210px] lg:w-[210px] bg-[#1E1E1E] border rounded-lg"
+                className="flex items-center md:py-4 md:px-2 lg:py-4 lg:px-2 py-2 px-2 w-[160px] md:w-[210px] lg:w-[210px] bg-[#1E1E1E]  rounded-lg"
                 variants={fadeInAnimationVariants}
                 initial="initial"
                 whileInView="animate"
@@ -32,15 +32,15 @@ const SkillsSection = () => {
                 custom={index}
               >
                 <div 
-                  className="flex items-center justify-center w-9 h-9 rounded-lg"
+                  className="flex items-center justify-center w-7 h-7 bg-opacity-50 rounded-lg"
                   style={{ backgroundColor: skill.color }} 
                 >
                   <Image 
                     src={skill.logo} 
                     alt={skill.name} 
                     className='object-contain'
-                    width={26}
-                    height={26} 
+                    width={18}
+                    height={18} 
                   />
                 </div>
                 <span className="text-xs md:text-base ml-3">{skill.name}</span>
