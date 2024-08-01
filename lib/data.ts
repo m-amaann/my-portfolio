@@ -1,9 +1,7 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { LuGraduationCap } from "react-icons/lu";
-import { ProjectTypes } from "./types";
 
-// import { HarritLogo } from "../components/harrit-logo";
 
 export const links = [
   {

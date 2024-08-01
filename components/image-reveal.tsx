@@ -43,7 +43,9 @@ const ImageReveal = ({ src }: ImageRevealProps) => {
         ref={revealRef}
         className="absolute inset-0 z-10 bg-background"
         style={{ width: "100%" }}
-      ></div>
+      >
+
+      </div>
       <Image
         ref={imageRef}
         src={src}

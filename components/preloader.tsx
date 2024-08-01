@@ -47,27 +47,7 @@ export default function Preloader() {
               src="/images/logo/logo.png"
               alt="logo"
             />
-            <motion.p
-              variants={preloaderSlide}
-              initial="hidden"
-              animate="open"
-              exit="closed"
-              custom={0}
-              className="mb-1 sm:mb-2"
-            >
-              Mohamed Amaan
-            </motion.p>
-            <motion.div
-              variants={preloaderSlide}
-              initial="hidden"
-              animate="open"
-              exit="closed"
-              custom={1}
-              className="flex items-center gap-2 sm:gap-3 text-cmaccent"
-            >
-
-
-            </motion.div>
+            
           </div>
 
           <svg className="absolute top-0 w-full h-[calc(100%+75rem)]">
