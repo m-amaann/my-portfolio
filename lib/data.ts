@@ -74,7 +74,7 @@ export const experiences = [
     date: "Oct 2021 - Present",
   },
   {
-    title: "Higher Naional Diploma in Software Engineering",
+    title: "Higher National Diploma in Software Engineering",
     location: "Colombo, Sri Lanka",
     institute: "BTEC Pearson (UK)",
     icon: React.createElement(LuGraduationCap),
@@ -105,6 +105,9 @@ export const experiences = [
     date: "Jan 2019 - Sep 2019",
   },
 ] as const;
+
+
+
 
 
 export const projects = [

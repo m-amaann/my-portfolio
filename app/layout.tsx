@@ -49,7 +49,9 @@ export default function RootLayout({
           </ThemeProvider>
         </ScrollProvider>
       </body>
-      {/* <GoogleAnalytics gaId={process.env.GA_MEASUREMENT_ID as string} /> */}
+      <GoogleAnalytics gaId={process.env.GA_MEASUREMENT_ID as string} />
     </html>
   );
 }
+
+
