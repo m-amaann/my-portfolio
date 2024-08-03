@@ -6,6 +6,7 @@ import { useInView } from "react-intersection-observer";
 import { useTheme } from "next-themes";
 import { experiences, educations } from "@/lib/data";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Experience() {
   const { ref } = useSectionInView("Qualification");
@@ -41,6 +42,8 @@ interface TimelineElementProps {
     technology?: string[];
     date: string;
     iconUrl: string;
+    institute?: string;
+    url?: string;
   };
   type: string;
 }
@@ -69,31 +72,53 @@ function TimelineElement({ item, type }: TimelineElementProps) {
               <p className="text-xs text-neutral-500 flex-col md:flex-row lg:flex-row dark:text-neutral-400 hidden sm:block" style={{ fontSize: "13px" }}>{item.type}</p>
             )}
           </div>
-          {item.company && (
-            <p className="text-xs text-neutral-500 dark:text-neutral-400 !mt-0 pt-1" style={{ fontSize: "13px" }}>
+          {/* {item.company && (
+            <p className="text-xs font-medium text-blue-500 dark:text-blue-300 !mt-0 pt-1" style={{ fontSize: "13px" }}>
               {item.company}
             </p>
+          )} */}
+          {item.company && item.url && (
+            <Link
+              href={item.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm font-medium  text-blue-500 dark:text-blue-300 cursor-pointer !mt-0 pt-1"
+              style={{ fontSize: "13px" }}
+            >
+              {item.company}
+            </Link>
           )}
-           {item.date && (
+          {item.institute && item.url && (
+            <Link
+              href={item.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm font-medium  text-blue-500 dark:text-blue-300 cursor-pointer !mt-0 pt-1"
+              style={{ fontSize: "13px" }}
+            >
+              {item.institute}
+            </Link>
+          )}
+          {item.date && (
             <p className="text-xs text-neutral-500 dark:text-neutral-400 !mt-0 pt-1" style={{ fontSize: "13px" }}>
               {item.date}
             </p>
           )}
           <p className="text-xs text-neutral-500 dark:text-neutral-400 !mt-0 pt-1" style={{ fontSize: "13px" }}>{item.location}</p>
           {item.type && (
-              <p className="text-xs text-neutral-500 flex-col md:flex-row lg:flex-row dark:text-neutral-400 block sm:hidden" style={{ fontSize: "13px" }}>{item.type}</p>
-            )}
+            <p className="text-xs text-neutral-500 flex-col md:flex-row lg:flex-row dark:text-neutral-400 block sm:hidden" style={{ fontSize: "13px" }}>{item.type}</p>
+          )}
         </div>
       </div>
 
       <div className="flex-1 md:pl-16 lg:pl-16 xl:pl-16">
         {type === "experience" && item.roles && (
           <>
-            <ul className="list-disc list-inside mt-3  ">
+            <ul className="list-disc list-inside mt-3" style={{ textAlign: "justify" }}>
               {item.roles.map((role, index) => (
                 <li
                   key={index}
-                  className="text-sm text-neutral-500 dark:text-neutral-400"
+                  className="text-xs md:text-sm leading-relaxed text-neutral-500 dark:text-neutral-400"
                 >
                   {role}
                 </li>

@@ -45,70 +45,6 @@ export const aboutMe = {
 
 
 
-// export const experiences = [
-//   {
-//     title: "Full Stack Developer Intern at Harriet (Pvt) Ltd",
-//     Company: "Harriet",
-//     type: "Full Time",
-//     location: "Colombo 07, Sri Lanka",
-//     description: '',
-//     technology: "React, Node.js, Express.js, MongoDB, Next.js, Git, Gitlab, Gitpod, Gitpod.io",
-//     icon: React.createElement(CgWorkAlt),
-//     date: "Feb 2024 - Present",
-//   },
-//   {
-//     title: "BEng in Software Engineering ",
-//     location: "Colombo, Sri Lanka",
-//     institute: "London Metropolitan University (UK)",
-//     icon: React.createElement(LuGraduationCap),
-//     date: "Feb 2020 - Jan 2024",
-//   },
-//   {
-//     title: "UI/UX Designer at Freelancer",
-//     Company: "Freelancer.com",
-//     location: "Remote",
-//     type: "Part Time",
-//     description: '',
-//     technology: "Figma, Adobe XD",
-//     icon: React.createElement(CgWorkAlt),
-//     date: "Oct 2021 - Present",
-//   },
-//   {
-//     title: "Higher National Diploma in Software Engineering",
-//     location: "Colombo, Sri Lanka",
-//     institute: "BTEC Pearson (UK)",
-//     icon: React.createElement(LuGraduationCap),
-//     date: "Jan 2021 - Sep 2022",
-//   },
-//   {
-//     title: "Data Entry Operator",
-//     Company: "Aegis Lanka (Pvt) Ltd",
-//     location: "Colombo 02, Sri Lanka",
-//     type: "Full-Time",
-//     description: '',
-//     technology: "Figma, Adobe XD",
-//     icon: React.createElement(CgWorkAlt),
-//     date: "Oct 2021 - Present",
-//   },
-//   {
-//     title: "Ordinary Level and Advanced Level",
-//     location: "Colombo 07, Sri Lanka",
-//     institute: 'Royal College',
-//     icon: React.createElement(LuGraduationCap),
-//     date: "Jan 2007 - Nov 2019",
-//   },
-//   {
-//     title: "Diploma in Information Technology",
-//     location: "Colombo, Sri Lanka",
-//     institute: "ESOFT Metro Campus",
-//     icon: React.createElement(LuGraduationCap),
-//     date: "Jan 2019 - Sep 2019",
-//   },
-// ] as const;
-
-
-
-
 export const experiences = [
   {
     title: "Full Stack Developer Intern",
@@ -116,13 +52,28 @@ export const experiences = [
     type: "Full Time",
     location: "Colombo 07, Sri Lanka",
     roles: [
-      "Developed front-end features using React",
-      "Implemented RESTful APIs using Node.js and Express.js",
-      "Collaborated with a team of developers using Git and Gitlab",
+      "Developed front-end application using Nexts.js",
+      "Implemented RESTful APIs using Woocommerce Rest API's to fetching data from Woocommerce",
+      "Collaborated with a team of developers using Git and Gitlab with JIRA.",
+      "Developing a frontend mobile application using Flutter and backend using .Net.",
     ],
-    technology: ["React", "Node.js", "Express.js", "MongoDB", "Next.js", "Git", "Gitlab", "Gitpod", "Gitpod.io"],
+    technology: ["React", "Next.js", "Typescript", "Javascript", "Woocommerce API", "AWS Amplify & EC2", "Flutter", ".Net", "Git", "GitLab", "JIRA"],
     iconUrl: "/images/logo/Harriet.png",
     date: "Feb 2024 - Present",
+    url: "https://www.linkedin.com/company/harriet-shopping",
+  },
+  {
+    title: "Freelancer",
+    company: "CodexLab Software Consultant",
+    type: "",
+    location: "",
+    roles: [
+      "Clients needed a web application for their business. Developed and giving application using Nexts.js and wordpress themes",
+    ],
+    technology: ["MERN Stack", "Next.js", "WordPress", "Spring boot", "SaaS Application", "Mobile Application"],
+    iconUrl: "/images/logo/codexlab.png",
+    date: "Oct 2023 - Present",
+    url: "https://www.codexlab.tech/",
   },
   {
     title: "UI/UX Designer",
@@ -135,22 +86,26 @@ export const experiences = [
       "Collaborated with clients to understand their requirements",
     ],
     iconUrl: "/images/logo/upwork.jpeg",
-    date: "Oct 2021 - Present",
+    date: "Jan 2021 - Oct 2021",
+    url: "https://www.freelancer.com/",
   },
   {
     title: "Data Entry Operator",
     company: "Aegis Lanka (Pvt) Ltd",
     location: "Colombo 02, Sri Lanka",
     type: "Full-Time",
-    technology: ["MS Excel", "Data Process"],
     roles: [
-      "Processed data entries with high accuracy",
-      "Managed large datasets using MS Excel",
+      "Processed data entries with high accuracy.",
+      "Managed large datasets using MS Excel and Data Process.",
     ],
+    technology: ["MS Excel", "Data Process", "Time Management"],
     iconUrl: "/images/logo/aegis.jpeg",
-    date: "Oct 2021 - Present",
+    date: "Jan 2020 - Jul 2020",
+    url: "https://www.srilankabusiness.com/exporters-directory/company-profiles/aegis-services-lanka-pvt-ltd/",
   },
 ];
+
+
 
 export const educations = [
   {
@@ -159,22 +114,34 @@ export const educations = [
     institute: "London Metropolitan University",
     iconUrl: "/images/logo/LMU.webp",
     date: "Feb 2020 - Jan 2024",
+    url: "https://www.londonmet.ac.uk/",
   },
   {
     title: "Higher National Diploma in Software Engineering",
     location: "Colombo, Sri Lanka",
-    institute: "BTEC Pearson (UK)",
+    institute: "BTEC Pearson UK",
     iconUrl: "/images/logo/Peason.png",
     date: "Jan 2021 - Sep 2022",
+    url: "https://qualifications.pearson.com/en/home.html",
   },
   {
-    title: "Ordinary Level and Advanced Level",
+    title: "Founational in Information Technology",
+    location: "Colombo, Sri Lanka",
+    institute: "Informatics Institute of Technology",
+    iconUrl: "/images/logo/IIT.png",
+    date: "Mar 2018 - Feb 2019",
+    url: "https://www.iit.ac.lk/",
+  },
+  {
+    title: "GCE Ordinary Level and Advanced Level",
     location: "Colombo 07, Sri Lanka",
     institute: "Royal College",
     iconUrl: "/images/logo/royal-college-colomob.jpeg",
     date: "Jan 2007 - Nov 2019",
+    url: "https://royalcollege.lk/",
   },
 ];
+
 
 
 
