@@ -19,25 +19,26 @@ const config = {
       center: true,
       padding: "2rem",
       screens: {
-        sm: '640px',
-        md: '768px',
-        lg: '1024px',
-        xl: '1280px',
-        '2xl': '1536px',
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
+        "2xl": "1536px",
       },
     },
     extend: {
       width: {
-        '30': '30%', // Custom width class for 30%
+        "30": "30%", // Custom width class for 30%
       },
       backgroundColor: {
-        'custom-rgba': 'rgba(24, 34, 57, 0.83)', // Custom background color
+        "custom-rgba": "rgba(24, 34, 57, 0.83)", // Custom background color
       },
       padding: {
-        '13px': '13px', // Custom padding
+        "13px": "13px", // Custom padding
+        "70px": "70px",
       },
       minHeight: {
-        '375px': '375px', // Custom minimum height
+        "375px": "375px", // Custom minimum height
       },
       fontFamily: {
         barlow: "Barlow",
@@ -84,7 +85,7 @@ const config = {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
-        '12px': '12px', 
+        "12px": "12px",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -94,7 +95,7 @@ const config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        blob: 'blobAnimation 10s infinite'
+        blob: "blobAnimation 10s infinite",
       },
       keyframes: {
         "accordion-down": {
@@ -106,13 +107,13 @@ const config = {
           to: { height: "0" },
         },
         blobAnimation: {
-          '0%, 100%': {
-            d: 'path("M441.5,321.5Q447,393,383.5,429.5Q320,466,249,469Q178,472,135,418.5Q92,365,59.5,307.5Q27,250,38.5,177.5Q50,105,118.5,80.5Q187,56,248,63Q309,70,380,87Q451,104,443.5,177Q436,250,441.5,321.5Z")'
+          "0%, 100%": {
+            d: 'path("M441.5,321.5Q447,393,383.5,429.5Q320,466,249,469Q178,472,135,418.5Q92,365,59.5,307.5Q27,250,38.5,177.5Q50,105,118.5,80.5Q187,56,248,63Q309,70,380,87Q451,104,443.5,177Q436,250,441.5,321.5Z")',
           },
-          '50%': {
-            d: 'path("M442.5,307.5Q442,365,395,392.5Q348,420,283,435Q218,450,174.5,405.5Q131,361,74,305Q17,249,57,184Q97,119,164,97.5Q231,76,299,88.5Q367,101,424.5,150.5Q482,200,442.5,307.5Z")'
-          }
-        }
+          "50%": {
+            d: 'path("M442.5,307.5Q442,365,395,392.5Q348,420,283,435Q218,450,174.5,405.5Q131,361,74,305Q17,249,57,184Q97,119,164,97.5Q231,76,299,88.5Q367,101,424.5,150.5Q482,200,442.5,307.5Z")',
+          },
+        },
       },
     },
   },

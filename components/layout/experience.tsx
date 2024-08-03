@@ -13,7 +13,7 @@ export default function Experience() {
   return (
     <section id="experience" ref={ref} className="scroll-mt-28 mb-28 sm:mb-40">
       <SectionHeading>Experiences & Educations</SectionHeading>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div className="space-y-4">
           <h3>Experiences</h3>
           {experiences.map((item, index) => (
@@ -50,62 +50,71 @@ function TimelineElement({ item, type }: TimelineElementProps) {
   const { theme } = useTheme();
 
   return (
-    <div
-      ref={ref}
-      className="border border-neutral-300 dark:border-neutral-700 rounded-lg p-4"
-    >
-
-      <div className="flex flex-col sm:flex-row items-start">  
-        <div className="flex-shrink-0 w-16 h-16 mb-4 sm:mb-0 sm:mr-4">
+    <div className="border border-neutral-300 dark:border-neutral-700 rounded-lg p-4">
+      <div ref={ref} className="flex items-center">
+        <div className="w-16 h-16 mr-4 flex-shrink-0 !m-0 flex items-center">
           <Image
-          src={item.iconUrl}
-          alt={item.title}
-          width={40}
-          height={40}
-          className="rounded-full"
-          objectFit="cover"
-        />
+            src={item.iconUrl}
+            alt={item.title}
+            width={40}
+            height={40}
+            className="rounded-full "
+            objectFit="cover"
+          />
         </div>
-        <div className="flex flex-col sm:flex-row items-start sm:items-center sm:justify-between mb-2">
-          <h3 className="font-semibold capitalize">{item.title}</h3>
-          {item.type && (
-            <p className="text-xs text-neutral-500 dark:text-neutral-400" style={{ fontSize: "13px" }}>
-              {item.type}
+        <div className="flex-1">
+          <div className="flex flex-row justify-between items-center">
+            <h3 className="font-semibold capitalize">{item.title}</h3>
+            {item.type && (
+              <p className="text-xs text-neutral-500 flex-col md:flex-row lg:flex-row dark:text-neutral-400 hidden sm:block" style={{ fontSize: "13px" }}>{item.type}</p>
+            )}
+          </div>
+          {item.company && (
+            <p className="text-xs text-neutral-500 dark:text-neutral-400 !mt-0 pt-1" style={{ fontSize: "13px" }}>
+              {item.company}
             </p>
           )}
-           {item.company && (
-          <p className="text-xs text-neutral-500 dark:text-neutral-400 !mt-0 pt-1" style={{ fontSize: "13px" }}>
-            {item.company}
-          </p>
+           {item.date && (
+            <p className="text-xs text-neutral-500 dark:text-neutral-400 !mt-0 pt-1" style={{ fontSize: "13px" }}>
+              {item.date}
+            </p>
           )}
-          <p className="text-xs text-neutral-500 dark:text-neutral-400 !mt-0 pt-1" style={{ fontSize: "13px" }}>
-            {item.location}
-          </p>
+          <p className="text-xs text-neutral-500 dark:text-neutral-400 !mt-0 pt-1" style={{ fontSize: "13px" }}>{item.location}</p>
+          {item.type && (
+              <p className="text-xs text-neutral-500 flex-col md:flex-row lg:flex-row dark:text-neutral-400 block sm:hidden" style={{ fontSize: "13px" }}>{item.type}</p>
+            )}
         </div>
       </div>
 
-        <div className="flex-1">  
+      <div className="flex-1 md:pl-16 lg:pl-16 xl:pl-16">
         {type === "experience" && item.roles && (
-          <ul className="list-disc list-inside mt-3">
-            {item.roles.map((role, index) => (
-              <li key={index} className="text-sm text-neutral-500 dark:text-neutral-400">
-                {role}
-              </li>
-            ))}
-          </ul>
+          <>
+            <ul className="list-disc list-inside mt-3  ">
+              {item.roles.map((role, index) => (
+                <li
+                  key={index}
+                  className="text-sm text-neutral-500 dark:text-neutral-400"
+                >
+                  {role}
+                </li>
+              ))}
+            </ul>
+          </>
         )}
         {type === "experience" && item.technology && (
-          <div className="flex flex-wrap gap-2 mt-4">
-            {item.technology.map((tech, index) => (
-              <span
-                key={index}
-                className="bg-gray-200 dark:bg-gray-700 text-xs text-neutral-700 dark:text-neutral-300 py-1 px-3 rounded-full"
-                style={{ fontSize: "0.75rem" }}
-              >
-                {tech}
-              </span>
-            ))}
-          </div>
+          <>
+            <div className="flex flex-wrap gap-2 mt-4">
+              {item.technology.map((tech, index) => (
+                <span
+                  key={index}
+                  className="bg-gray-200 dark:bg-gray-700 text-xs text-neutral-700 dark:text-neutral-300 py-1 px-3 rounded-full"
+                  style={{ fontSize: "0.75rem" }}
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </>
         )}
       </div>
     </div>
