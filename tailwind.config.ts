@@ -44,7 +44,7 @@ const config = {
         barlow: "Barlow",
       },
       colors: {
-        cmprimary: "#030712", //gray-950
+        cmprimary: "#0e1421", //gray-950
         cmsecondary: "#f3f4f6", // gray-100
         cmaccent: "#0458AC", //indigo-600
         border: "hsl(var(--border))",

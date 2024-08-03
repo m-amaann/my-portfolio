@@ -30,10 +30,8 @@ export default function RootLayout({
       className="select-none scrollbar-thin scrollbar-thumb-cmprimary scrollbar-track-cmsecondary dark:scrollbar-thumb-cmsecondary dark:scrollbar-track-cmprimary"
     >
        <body className={`${barlow.className} bg-cmsecondary overflow-x-hidden text-cmprimary relative dark:bg-cmprimary dark:text-cmsecondary dark:text-opacity-90`}> 
-        {/* <div className="absolute top-[-6rem] -z-10 right-[10rem] h-[40rem] w-[32rem] rounded-full blur-[12rem] dark:bg-[#263347]"></div>
-        <div className=" absolute top-[-1rem] -z-10 left-[-30rem] h-[40rem] mdLw-[55rem] rounded-full blur-[10rem] w-[20rem] md:left-[-10rem] lg:left-[-25rem] xl:left-[-12rem] 2xl:left-[-2rem] dark:bg-[#263347]"></div> */}
-                <div className="bg-[#fcd2d2] absolute top-[-6rem] -z-10 right-[11rem] h-[37.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] dark:bg-[#263347]"></div>
-                <div className="bg-[#d2cdfc] absolute top-[-1rem] -z-10 left-[-35rem] h-[37.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-[#263347]"></div>
+                <div className="bg-[#c7e0f9] absolute top-[-6rem] -z-10  rounded-full blur-[30rem]  dark:bg-[#263347]"></div>
+                <div className="bg-[#c7e0f9] absolute top-[-1rem] -z-10  p-36 h-[45rem] rounded-full blur-[10rem] dark:bg-[#263347]"></div>
         <ScrollProvider>
           <ThemeProvider
             attribute="class"
