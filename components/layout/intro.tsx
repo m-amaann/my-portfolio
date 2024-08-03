@@ -136,7 +136,7 @@ import { FlipWords } from "../ui/flip-words";
 const words1 = ["Hi", "There,", "I'm"];
 const words2 = ["Mohamed", "Amaan"];
 const description: string = `A self-driven individual, aspiring to explore new horizons in the field of IT with an appetite for Full Stack Engineering.`;
-const flipwords = ["& UI/UX Designer", "From Sri Lanka"];
+const flipwords = ["& UX Designer", "From Sri Lanka"];
 
 
 export default function Intro() {
@@ -188,10 +188,16 @@ export default function Intro() {
             >
               {renderText(words2)}
             </motion.div>
-            <span className="text-xl sm:text-2xl md:text-3xl lg:text-3xl  pt-2 md:pt-3 lg:pt-4 xl:pt-4  font-bold leading-normal tracking-wide text-black dark:text-white">
-              Software Engineer
-              <FlipWords words={flipwords} />
-            </span>
+            <div className="flex flex-col ">
+              <div className="flex flex-row flex-wrap  text-center text-xl sm:text-2xl md:text-3xl lg:text-3xl pt-2 md:pt-3 lg:pt-4 xl:pt-4 font-bold leading-normal tracking-wide text-black dark:text-white">
+                <span className="flex-shrink-0">Software Engineer</span>
+                <span className="flex-shrink-0 ml-1 sm:ml-2">
+                  <FlipWords words={flipwords} />
+                </span>
+              </div>
+            </div>
+
+
             <motion.p
               className="text-[16px] sm:text-base md:text-base lg:text-lg leading-normal text-gray-500 py-4"
               initial="hidden"

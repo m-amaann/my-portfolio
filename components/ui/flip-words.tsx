@@ -57,7 +57,7 @@ export const FlipWords = ({
           position: "absolute",
         }}
         className={cn(
-          "z-10 inline-block relative text-left text-neutral-900 dark:text-neutral-100 px-2",
+          "z-10 inline-block relative text-left text-neutral-900 dark:text-neutral-100 px-2 flex-row",
           className
         )}
         key={currentWord}
@@ -74,7 +74,6 @@ export const FlipWords = ({
                   duration: 0.4,
                 }}
                 className="inline-block"
-                style={{ letterSpacing: "0.1em" }} // Adjust letter spacing here
               >
                 {letter}
               </motion.span>
@@ -83,7 +82,6 @@ export const FlipWords = ({
               <motion.span
                 key={`space-${wordIndex}`}
                 className="inline-block"
-                style={{ letterSpacing: "0.1px" }} // Adjust spacing between words here
               >
                 &nbsp;
               </motion.span>
