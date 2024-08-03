@@ -127,7 +127,7 @@ export const projects = [
     description: "",
     tags: ["Design", "Development", "UI/UX", "Nov 2023 - Feb 2024"],
     imageUrl: "/images/projects/Sea-King.png",
-    link: "https://restaurant-application-seven.vercel.app/",
+    link: "https://github.com/m-amaann/Restaurant-Application/",
   },
   {
     title: "Dunes Cart Website - UI/UX Design",
