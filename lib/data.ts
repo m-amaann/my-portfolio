@@ -68,7 +68,8 @@ export const experiences = [
     type: "",
     location: "",
     roles: [
-      "Clients needed a web application for their business. Developed and giving application using Nexts.js and wordpress themes",
+      "Developed custom software solutions tailored to specific clients requirements.",
+      "This is only for freelancing project purpose.",
     ],
     technology: ["MERN Stack", "Next.js", "WordPress", "Spring boot", "SaaS Application", "Mobile Application"],
     iconUrl: "/images/logo/codexlab.png",
