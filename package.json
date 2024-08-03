@@ -22,6 +22,7 @@
     "@types/react": "18.2.14",
     "@types/react-dom": "18.2.6",
     "@vercel/speed-insights": "^1.0.10",
+    "aceternity-ui": "^0.2.2",
     "autoprefixer": "10.4.14",
     "barlow": "^0.0.1",
     "class-variance-authority": "^0.7.0",

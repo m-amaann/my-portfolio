@@ -24,14 +24,14 @@ const ImageReveal = ({ src }: ImageRevealProps) => {
         },
       });
       tl.to(revealRef.current, {
-        duration: 1.5,
+        duration: 0.8,
         width: "0%",
         ease: "Power2.easeInOut",
-      }).from(imageRef.current, 1.4, {
-        duration: 1.5,
+      }).from(imageRef.current, 1.2, {
+        duration: 1.1,
         scale: 1.6,
         ease: "Power2.easeInOut",
-        delay: -1.5,
+        delay: -1.2,
       });
     },
     { scope: revealRef }

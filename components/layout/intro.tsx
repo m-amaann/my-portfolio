@@ -96,16 +96,16 @@
 //                 </motion.div>
 //               </div>
 //             </div>
-            // <div className="flex-col md:w-1/2 flex md:-mt-28 pb-10 justify-center items-center">
-            //   <Image
-            //     loading="lazy"
-            //     src="/profile/profile-1.png"
-            //     width={600}
-            //     height={600}
-            //     className="object-cover max-md:w-96 max-md:h-96 mb-16 md:mb-0"
-            //     alt="Profile Image"
-            //   />
-            // </div>
+// <div className="flex-col md:w-1/2 flex md:-mt-28 pb-10 justify-center items-center">
+//   <Image
+//     loading="lazy"
+//     src="/profile/profile-1.png"
+//     width={600}
+//     height={600}
+//     className="object-cover max-md:w-96 max-md:h-96 mb-16 md:mb-0"
+//     alt="Profile Image"
+//   />
+// </div>
 //           </div>
 //         </div>
 //       </div>
@@ -129,10 +129,15 @@ import { useSectionInView } from "@/hooks/useSection";
 import { useSection } from "@/hooks/useSection";
 import { slideUpDesc, slideUpHeading } from "@/lib/anim";
 import Image from "next/image";
+import { FlipWords } from "../ui/flip-words";
+
+
 
 const words1 = ["Hi", "There,", "I'm"];
 const words2 = ["Mohamed", "Amaan"];
 const description: string = `A self-driven individual, aspiring to explore new horizons in the field of IT with an appetite for Full Stack Engineering.`;
+const flipwords = ["& UI/UX Designer", "From Sri Lanka"];
+
 
 export default function Intro() {
   const { ref } = useSectionInView("Home");
@@ -170,24 +175,25 @@ export default function Intro() {
             animate="visible"
           >
             <motion.div
-              className="flex text-xl sm:text-2xl md:text-2xl lg:text-2xl xl:text-2xl uppercase font-bold mb-4"
+              className="flex text-xl sm:text-2xl md:text-2xl lg:text-2xl xl:text-2xl  font-bold mb-2 leading-normal"
               initial="hidden"
               animate="visible"
             >
               {renderText(words1)} 👋
             </motion.div>
             <motion.div
-              className="flex text-xl sm:text-2xl md:text-[38px] font-bold text-[#0458AC] leading-normal tracking-wide uppercase"
+              className="flex text-xl sm:text-2xl md:text-[38px] font-bold text-[#0458AC] leading-normal uppercase"
               initial="hidden"
               animate="visible"
             >
               {renderText(words2)}
             </motion.div>
-            <span className="text-xl sm:text-2xl md:text-3xl lg:text-3xl pt-4  font-bold leading-normal tracking-wide text-black dark:text-white mb-4">
-              Software Engineer & UX Designer
+            <span className="text-2xl sm:text-2xl md:text-3xl lg:text-3xl  pt-2 md:pt-3 lg:pt-4 xl:pt-4  font-bold leading-normal tracking-wide text-black dark:text-white">
+              Software Engineer
+              <FlipWords words={flipwords} />
             </span>
             <motion.p
-              className="text-sm sm:text-base md:text-lg lg:text-xl leading-normal text-gray-500 mb-4"
+              className="text-sm sm:text-base md:text-base lg:text-lg leading-normal text-gray-500 mb-4"
               initial="hidden"
               animate="visible"
               variants={slideUpDesc}
@@ -215,8 +221,8 @@ export default function Intro() {
               </Link>
               <a
                 className="flex items-center gap-2 py-3 px-6 text-xs sm:text-sm md:text-base transition bg-white rounded-full borderBlack dark:bg-white/10"
-              href="#contact"
-                // download
+                href="#contact"
+              // download
               >
                 Download CV <HiDownload className="transition opacity-60" />
               </a>

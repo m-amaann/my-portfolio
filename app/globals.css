@@ -69,3 +69,39 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+
+
+
+
+
+
+/* 
+
+INTRO SECTION FOR IMAGE ADD BLOOBS BACK 
+ */
+
+ @keyframes blob {
+  0%, 100% {
+    border-radius: 50% 40% 50% 40%;
+  }
+  25% {
+    border-radius: 40% 50% 60% 50%;
+  }
+  50% {
+    border-radius: 50% 50% 50% 50%;
+  }
+  75% {
+    border-radius: 40% 60% 50% 60%;
+  }
+}
+
+.blob {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #6c63ff, #5a9bf6);
+  animation: blob 10s infinite;
+  z-index: -1;
+}
