@@ -188,12 +188,12 @@ export default function Intro() {
             >
               {renderText(words2)}
             </motion.div>
-            <span className="text-2xl sm:text-2xl md:text-3xl lg:text-3xl  pt-2 md:pt-3 lg:pt-4 xl:pt-4  font-bold leading-normal tracking-wide text-black dark:text-white">
+            <span className="text-xl sm:text-2xl md:text-3xl lg:text-3xl  pt-2 md:pt-3 lg:pt-4 xl:pt-4  font-bold leading-normal tracking-wide text-black dark:text-white">
               Software Engineer
               <FlipWords words={flipwords} />
             </span>
             <motion.p
-              className="text-sm sm:text-base md:text-base lg:text-lg leading-normal text-gray-500 mb-4"
+              className="text-[16px] sm:text-base md:text-base lg:text-lg leading-normal text-gray-500 py-4"
               initial="hidden"
               animate="visible"
               variants={slideUpDesc}

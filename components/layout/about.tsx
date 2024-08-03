@@ -65,7 +65,6 @@
 
 
 
-
 import { useInView, motion } from "framer-motion";
 import { useRef } from "react";
 import SectionHeading from "../section-heading";
@@ -92,7 +91,7 @@ export default function About() {
       <SectionHeading>About Me</SectionHeading>
       <div ref={description}>
         <div className="relative flex flex-col items-center gap-12 mt-12 lg:items-start lg:flex-row">
-          <p className="gap-2 m-0 leading-10 text-lg sm:text-xl md:text-xl lg:text-2xl px-4 md:px-0">
+          <p className="gap-2 m-0 leading-10 text-base sm:text-lg md:text-xl lg:text-2xl px-4 md:px-0">
             {phrase.split(" ").map((word, index) => (
               <span
                 className="relative inline-flex overflow-hidden"
@@ -111,7 +110,7 @@ export default function About() {
           </p>
           <motion.p
             variants={opacity}
-            className="w-full md:w-4/5 m-0 font-light sm:text-lg px-4 md:px-0"
+            className="w-full md:w-4/5 m-0 font-normal text-[15px] sm:text-base md:text-lg px-4 md:px-0"
             animate={isInViewDesc ? "open" : "closed"}
           >
             {aboutMe.shortDesc}
