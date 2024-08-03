@@ -13,6 +13,7 @@ import { FaPaperPlane } from "react-icons/fa";
 
 const formSchema = z.object({
   email: z.string().email(),
+  subject: z.string().min(1),
   message: z.string().min(1),
 });
 
@@ -32,6 +33,7 @@ const ContactForm = () => {
     resolver: zodResolver(formSchema),
     defaultValues: {
       email: "",
+      subject: "",
       message: "",
     },
   });
@@ -47,6 +49,22 @@ const ContactForm = () => {
               <FormControl>
                 <Input
                   placeholder="Email"
+                  {...field}
+                  required
+                  className="outline-none border-b"
+                />
+              </FormControl>
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="subject"
+          render={({ field }) => (
+            <FormItem>
+              <FormControl>
+                <Input
+                  placeholder="Subject   (e.g. Hiring, Project proposal)"
                   {...field}
                   required
                   className="outline-none border-b"
@@ -73,7 +91,7 @@ const ContactForm = () => {
         />
         <Button
           type="submit"
-          className="group w-full flex items-center justify-center gap-2  bg-cmaccent dark:bg-cmaccent/80 text-cmsecondary rounded-md outline-none transition-all hover:dark:bg-cmaccent  hover:bg-cmaccent/80"
+          className="group w-full flex items-center justify-center gap-2 bg-cmaccent dark:bg-cmaccent/80 text-cmsecondary rounded-md outline-none transition-all hover:dark:bg-cmaccent hover:bg-cmaccent/80"
         >
           Submit{" "}
           <FaPaperPlane className="text-xs opacity-70 transition-all group-hover:translate-x-1 group-hover:-translate-y-1" />{" "}

@@ -1,15 +1,11 @@
 "use client";
 import React from "react";
 import SectionHeading from "../section-heading";
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from "react-vertical-timeline-component";
-import "react-vertical-timeline-component/style.min.css";
 import { useSectionInView } from "@/hooks/useSection";
 import { useInView } from "react-intersection-observer";
 import { useTheme } from "next-themes";
-import { experiences } from "@/lib/data";
+import { experiences, educations } from "@/lib/data";
+import Image from "next/image";
 
 export default function Experience() {
   const { ref } = useSectionInView("Qualification");
@@ -17,53 +13,101 @@ export default function Experience() {
   return (
     <section id="experience" ref={ref} className="scroll-mt-28 mb-28 sm:mb-40">
       <SectionHeading>Experiences & Educations</SectionHeading>
-      <VerticalTimeline lineColor="" className="overflow-hidden">
-        {experiences.map((item, index) => {
-          return <TimelineElement key={index} item={item} />;
-        })}
-      </VerticalTimeline>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="space-y-4">
+          <h3>Experiences</h3>
+          {experiences.map((item, index) => (
+            <TimelineElement key={index} item={item} type="experience" />
+          ))}
+        </div>
+        <div className="space-y-4">
+          <h3>Educations</h3>
+          {educations.map((item, index) => (
+            <TimelineElement key={index} item={item} type="education" />
+          ))}
+        </div>
+      </div>
     </section>
   );
 }
 
-function TimelineElement({ item }: { item: any }) {
+interface TimelineElementProps {
+  item: {
+    title: string;
+    company?: string;
+    type?: string;
+    location: string;
+    roles?: string[];
+    technology?: string[];
+    date: string;
+    iconUrl: string;
+  };
+  type: string;
+}
+
+function TimelineElement({ item, type }: TimelineElementProps) {
   const { ref, inView } = useInView({ threshold: 0 });
   const { theme } = useTheme();
 
   return (
-    <div ref={ref} className="vertical-timeline-element">
-      <VerticalTimelineElement
-        contentStyle={{
-          background:
-            theme === "light"
-              ? "rgb(87 85 254 / 0.05)"
-              : "rgba(255, 255, 255, 0.05)",
-          boxShadow: "none",
-          border: "1px solid rgba(0, 0, 0, 0.05)",
-          textAlign: "left",
-          padding: "1.2rem 2rem",
+    <div
+      ref={ref}
+      className="border border-neutral-300 dark:border-neutral-700 rounded-lg p-4"
+    >
 
-        }}
-        contentArrowStyle={{
-          borderRight:
-            theme === "light"
-              ? "0.4rem solid #9ca3af"
-              : "0.4rem solid rgba(255, 255, 255, 0.5)",
-        }}
-        visible={inView}
-        date={item.date}
-        icon={item.icon}
-        iconStyle={{
-          background: theme === "light" ? "white" : "rgba(255, 255, 255, 0.15)",
-          fontSize: "1.5rem",
-        }}
-      >
-        <h3 className="font-semibold capitalize">{item.title}</h3>
-        <p className="font-normal !mt-0 text-sm">{item.location}</p>
-        <p className="!mt-1 !font-normal text-sm text-neutral-500 dark:text-neutral-400">
-          {item.description}
-        </p>
-      </VerticalTimelineElement>
+      <div className="flex flex-col sm:flex-row items-start">  
+        <div className="flex-shrink-0 w-16 h-16 mb-4 sm:mb-0 sm:mr-4">
+          <Image
+          src={item.iconUrl}
+          alt={item.title}
+          width={40}
+          height={40}
+          className="rounded-full"
+          objectFit="cover"
+        />
+        </div>
+        <div className="flex flex-col sm:flex-row items-start sm:items-center sm:justify-between mb-2">
+          <h3 className="font-semibold capitalize">{item.title}</h3>
+          {item.type && (
+            <p className="text-xs text-neutral-500 dark:text-neutral-400" style={{ fontSize: "13px" }}>
+              {item.type}
+            </p>
+          )}
+           {item.company && (
+          <p className="text-xs text-neutral-500 dark:text-neutral-400 !mt-0 pt-1" style={{ fontSize: "13px" }}>
+            {item.company}
+          </p>
+          )}
+          <p className="text-xs text-neutral-500 dark:text-neutral-400 !mt-0 pt-1" style={{ fontSize: "13px" }}>
+            {item.location}
+          </p>
+        </div>
+      </div>
+
+        <div className="flex-1">  
+        {type === "experience" && item.roles && (
+          <ul className="list-disc list-inside mt-3">
+            {item.roles.map((role, index) => (
+              <li key={index} className="text-sm text-neutral-500 dark:text-neutral-400">
+                {role}
+              </li>
+            ))}
+          </ul>
+        )}
+        {type === "experience" && item.technology && (
+          <div className="flex flex-wrap gap-2 mt-4">
+            {item.technology.map((tech, index) => (
+              <span
+                key={index}
+                className="bg-gray-200 dark:bg-gray-700 text-xs text-neutral-700 dark:text-neutral-300 py-1 px-3 rounded-full"
+                style={{ fontSize: "0.75rem" }}
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+        )}
+      </div>
     </div>
   );
 }

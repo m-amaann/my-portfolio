@@ -6,7 +6,7 @@ import ContactFormEmail from "@/email/contact-form-email";
 
 const resend = new Resend(process.env.RESEND_API_KEY as string);
 
-export const sendEmail = async (values: { email: string; message: string }) => {
+export const sendEmail = async (values: { email: string; subject: string; message: string }) => {
   console.log("Sending email with values:", values);
   console.log("Using Resend API key:", process.env.RESEND_API_KEY);
 
@@ -15,7 +15,7 @@ export const sendEmail = async (values: { email: string; message: string }) => {
     data = await resend.emails.send({
       from: "Contact Form <onboarding@resend.dev>",
       to: "amaan.rcm@gmail.com",
-      subject: "Message from contact form | Portfolio",
+      subject: values.subject, // Use the subject from form values
       reply_to: values.email,
       react: React.createElement(ContactFormEmail, {
         message: values.message,
