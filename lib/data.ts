@@ -3,8 +3,6 @@ import { CgWorkAlt } from "react-icons/cg";
 import { LuGraduationCap } from "react-icons/lu";
 import { ProjectTypes } from "./types";
 
-// import { HarritLogo } from "../components/harrit-logo";
-
 export const links = [
   {
     name: "Home",
@@ -17,6 +15,10 @@ export const links = [
   {
     name: "Projects",
     hash: "#projects",
+  },
+  {
+    name: "Services",
+    hash: "#services",
   },
   {
     name: "Skills",
@@ -32,6 +34,8 @@ export const links = [
   },
 ] as const;
 
+
+
 export const aboutMe = {
   longDesc:
     'As a Full Stack Engineer with 1.5 years of working experience, I am a self-driven individual with a passion for exploring new horizons in the IT field. My expertise lies in crafting dynamic and engaging interfaces through writing clean code and utilizing cutting-edge development tools and techniques. With a strong foundation in both web and mobile development, I excel at creating user-centric applications that deliver seamless experiences.',
@@ -42,6 +46,32 @@ export const aboutMe = {
   secondaryColor: "#f3f4f6",
   accentColor: "#4f46e5",
 } as const;
+
+
+
+export const services = [
+  {
+    emoji: "/other/mobile-app-development-isometric-background-with-composition-smartphone-screens-with-3d-app-icons-connections-vector-illustration_1284-77301.avif",
+    heading: "Mobile Development",
+    detail: "Developing high-performance mobile apps for both cross-platform.",
+  },
+  {
+    emoji: "/other/4799410-scaled.avif", 
+    heading: "Web Developement",
+    detail: "Building responsive and dynamic websites tailored to your business needs.",
+  },
+  {
+    emoji: "/other/cover.webp", 
+    heading: "UI/UX Design", 
+    detail: "Designing intuitive and engaging user interfaces that enhance user experience.",
+  },
+  {
+    emoji: "/other/enterprise.avif", 
+    heading: "CMS Applications", 
+    detail: "Developing robust and scalable solutions to streamline complex business processes.",
+  },
+];
+
 
 
 
@@ -250,7 +280,7 @@ export const SKILLS_DATA = [
       { name: "NPM", logo: "/images/SKILLS/programing.png", color: "#FFBDBD" },
       { name: "Postman", logo: "/images/SKILLS/postman.png", color: "#F7931E" }, 
       { name: "Jenkins", logo: "/images/SKILLS/jenkins.png", color: "#0070C0" }, 
-      { name: "AWS Cloud", logo: "/images/SKILLS/AWS.png", color: "#F26522" }, 
+      { name: "AWS Cloud", logo: "/images/SKILLS/AWS_2.png", color: "#fcb96c" }, 
       { name: "JIRA", logo: "/images/SKILLS/jira.png", color: "#69A3F9" },
       { name: "Wordpress", logo: "/images/SKILLS/wordpress.png", color: "#9AC3D0" }, 
       { name: "CI/CD Pipelines", logo: "/images/SKILLS/CI_CD.png", color: "#B4D2E4" }, 

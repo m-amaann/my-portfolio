@@ -29,8 +29,8 @@ export default function RootLayout({
       suppressHydrationWarning
       className="select-none scrollbar-thin scrollbar-thumb-cmprimary scrollbar-track-cmsecondary dark:scrollbar-thumb-cmsecondary dark:scrollbar-track-cmprimary"
     >
-       <body className={`${barlow.className} bg-cmsecondary overflow-x-hidden text-cmprimary relative dark:bg-cmprimary dark:text-cmsecondary dark:text-opacity-90`}> 
-                <div className="bg-[#c7e0f9] absolute top-[-1rem] -z-10  rounded-full blur-[10rem] dark:bg-[#263347]"></div>
+      <body className={`${barlow.className} bg-cmsecondary overflow-x-hidden text-cmprimary relative dark:bg-cmprimary dark:text-cmsecondary dark:text-opacity-90`}>
+        <div className="bg-[#c7e0f9] absolute top-[-1rem] -z-10  rounded-full blur-[10rem] dark:bg-[#263347]"></div>
         <ScrollProvider>
           <ThemeProvider
             attribute="class"

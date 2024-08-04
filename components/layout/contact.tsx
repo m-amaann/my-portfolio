@@ -15,7 +15,7 @@ export default function Contact() {
       className="mb-20 sm:mb-28 w-full overflow-hidden"
     >
       <SectionHeading>Contact Me</SectionHeading>
-      <div className="mt-20 flex w-full justify-center flex-col md:flex-row gap-10 min-h-[50dvh]">
+      <div className="mt-20 flex w-full justify-center flex-col md:flex-row gap-10 min-h-[40dvh]">
         <div className="w-full max-w-lg">
           <ContactInfo />
         </div>
