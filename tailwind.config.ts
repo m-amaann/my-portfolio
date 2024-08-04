@@ -27,6 +27,10 @@ const config = {
       },
     },
     extend: {
+      spacing: {
+        '112': '28rem',
+        '96': '24rem', 
+      },
       width: {
         "30": "30%", // Custom width class for 30%
       },

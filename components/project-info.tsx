@@ -2,32 +2,31 @@ import { useProjectStore } from "@/hooks/useStore";
 import { ProjectTypes } from "@/lib/types";
 import { useInView } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
-import ProjectCursor from "./project-cursor";
-import ImageReveal from "./image-reveal";
+import Image from "next/image";
 
 const ProjectInfo = ({ project }: { project: ProjectTypes }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { margin: "-50% 0px -50% 0px" });
-  const [isHovered, setIsHovered] = useState(false);
-
-  const setInViewProject = useProjectStore((state) => state.setInViewProject);
-  const inViewProject = useProjectStore((state) => state.inViewProject);
-//ts-ignore
-  useEffect(() => {
-    if (isInView) setInViewProject(project.number);
-  }, [isInView, project.title, project.number, setInViewProject, inViewProject]);
+  const imageRef = useRef(null);
 
   return (
     <a href={project.link} target="_blank" rel="noopener noreferrer">
       <div
         ref={ref}
-        onMouseOver={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
+        
+        
         className={`${!isInView && "opacity-30"} transition-all overflow-hidden   p-4 rounded-lg`}
       >
-        {isHovered && <ProjectCursor />}
         <div className="relative aspect-video  w-full ">
-          <ImageReveal src={project.imageUrl}  />
+          <div className="relative w-full h-full overflow-hidden">
+            <Image
+              ref={imageRef}
+              src={project.imageUrl}
+              fill
+              alt="Reveal"
+              className="object-cover w-full h-full rounded-lg"
+            />
+          </div>
         </div>
         <div className="mt-4">
           <p
@@ -46,8 +45,8 @@ const ProjectInfo = ({ project }: { project: ProjectTypes }) => {
               <div
                 key={index}
                 className={`${project.tags.length - 1 === index
-                    ? "bg-cmaccent text-cmsecondary"
-                    : ""
+                  ? "bg-cmaccent text-cmsecondary"
+                  : ""
                   } px-4 py-1 border-2 text-xs sm:text-sm lg:text-xs rounded-full`}
               >
                 {tag}
