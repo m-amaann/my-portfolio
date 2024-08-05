@@ -7,13 +7,13 @@ import { motion } from "framer-motion";
 import { slideUp } from "@/lib/anim";
 
 export default function Services() {
-    const { ref } = useSectionInView("Services");
+    
     return (
         <motion.section
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
-            ref={ref}
+            // ref={ref}
             id="services"
             className="scroll-mt-28 w-full mb-28 sm:mb-40"
         >
