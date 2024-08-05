@@ -2,7 +2,7 @@
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
@@ -10,6 +10,8 @@ import { Textarea } from "./ui/textarea";
 import { sendEmail } from "@/actions/sendEmail";
 import toast from "react-hot-toast";
 import { FaPaperPlane } from "react-icons/fa";
+import { motion } from "framer-motion";
+import { ThreeDots } from 'react-loader-spinner';
 
 const formSchema = z.object({
   email: z.string().email(),
@@ -17,18 +19,9 @@ const formSchema = z.object({
   message: z.string().min(1),
 });
 
-async function onSubmit(values: z.infer<typeof formSchema>) {
-  const { error } = await sendEmail(values);
-
-  if (error) {
-    toast.error(error);
-    return;
-  }
-
-  toast.success("Email sent successfully!");
-}
-
 const ContactForm = () => {
+  const [isLoading, setIsLoading] = useState(false);
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -37,6 +30,20 @@ const ContactForm = () => {
       message: "",
     },
   });
+
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {
+    setIsLoading(true);
+    const { error } = await sendEmail(values);
+
+    setIsLoading(false);
+
+    if (error) {
+      toast.error(error);
+      return;
+    }
+
+    toast.success("Email sent successfully!");
+  };
 
   return (
     <Form {...form}>
@@ -64,7 +71,7 @@ const ContactForm = () => {
             <FormItem>
               <FormControl>
                 <Input
-                  placeholder="Subject   (e.g. Hiring, Project proposal)"
+                  placeholder="Subject   (e.g. Hiring, Project proposal and etc)"
                   {...field}
                   required
                   className="outline-none border-b"
@@ -91,10 +98,26 @@ const ContactForm = () => {
         />
         <Button
           type="submit"
+          variant="ghost"
           className="group w-full flex items-center justify-center gap-2 bg-cmaccent dark:bg-cmaccent/80 text-cmsecondary rounded-md outline-none transition-all hover:dark:bg-cmaccent hover:bg-cmaccent/80"
+          disabled={isLoading}
         >
-          Submit{" "}
-          <FaPaperPlane className="text-xs opacity-70 transition-all group-hover:translate-x-1 group-hover:-translate-y-1" />{" "}
+          {isLoading ? (
+            <motion.div
+              className="flex items-center justify-center"
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
+            >
+              
+              <ThreeDots color="#FFF" height={20} width={20} />
+            </motion.div>
+          ) : (
+            <>
+              Send Now
+              <FaPaperPlane className="text-xs opacity-70 transition-all group-hover:translate-x-1 group-hover:-translate-y-1" />
+            </>
+          )}
         </Button>
       </form>
     </Form>
