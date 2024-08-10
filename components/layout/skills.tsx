@@ -18,7 +18,7 @@ const SkillsSection = () => {
       className="mb-28 scroll-mt-28 text-center sm:mb-40"
     >
       <SectionHeading>My Skills</SectionHeading>
-      <p className="text-sm md:text-base lg:text-lg -mt-7 !font-normal text-gray-200 pb-7">
+      <p className="text-sm md:text-base lg:text-lg -mt-7 !font-normal text-black dark:text-gray-500 pb-7">
         Over the past 2 years, I've been working consistently with some of these technologies, refining my expertise and delivering effective projects.
       </p>
       {SKILLS_DATA.map((category, index) => (
