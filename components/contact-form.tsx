@@ -71,7 +71,7 @@ const ContactForm = () => {
             <FormItem>
               <FormControl>
                 <Input
-                  placeholder="Subject   (e.g. Hiring, Project proposal and etc)"
+                  placeholder="Subject   (e.g, Project Inquiry, Job Opportunity, Collaboration)"
                   {...field}
                   required
                   className="outline-none border-b"

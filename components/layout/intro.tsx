@@ -142,7 +142,7 @@ export default function Intro() {
         <div className="w-full h-full flex justify-center items-center overflow-hidden">
 
           <Image
-            src="/profile/image-5.png"
+            src="/profile/PROFILE.png"
             className=" w-full h-auto"
             width={300}
             height={300}
