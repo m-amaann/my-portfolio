@@ -11,12 +11,12 @@ const ProjectInfo = ({ project }: { project: ProjectTypes }) => {
 
   return (
     <a href={project.link} target="_blank" rel="noopener noreferrer">
+      
       <div
         ref={ref}
-        
-        
         className={`${!isInView && "opacity-30"} transition-all overflow-hidden   p-4 rounded-lg`}
       >
+        
         <div className="relative aspect-video  w-full ">
           <div className="relative w-full h-full overflow-hidden">
             <Image

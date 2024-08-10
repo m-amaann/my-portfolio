@@ -62,8 +62,9 @@ function TimelineElement({ item, type }: TimelineElementProps) {
             width={40}
             height={40}
             className="rounded-full "
-            objectFit="cover"
+            style={{ objectFit: 'cover' }}
           />
+
         </div>
         <div className="flex-1">
           <div className="flex flex-row justify-between items-center">

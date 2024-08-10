@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import { slideUp } from "@/lib/anim";
 
 export default function Services() {
-    
+
     return (
         <motion.section
             initial={{ opacity: 0, y: 100 }}
@@ -18,23 +18,25 @@ export default function Services() {
             className="scroll-mt-28 w-full mb-28 sm:mb-40"
         >
             <SectionHeading>What I Am Providing</SectionHeading>
-            <motion.div 
+            <motion.div
                 variants={slideUp}
                 className="flex flex-col items-center justify-center gap-8 px-4 md:px-0"
             >
                 <div className="flex flex-wrap justify-center gap-8">
                     {services.map((service, index) => (
-                        <div 
-                            key={index} 
+                        <div
+                            key={index}
                             className="flex flex-col items-center bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 w-full sm:w-80 md:w-72 lg:w-80 h-auto transition-transform transform duration-500 hover:shadow-md dark:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]"
                         >
-                          <div className="relative w-16 h-16 mb-4"> {/* Fixed size container */}
+                            <div className="relative w-16 h-16 mb-4"> {/* Fixed size container */}
+                          
                                 <Image
                                     src={service.emoji}
                                     alt={service.heading}
-                                    layout="fill" 
-                                    className="rounded-lg object-cover hover:-rotate-12 transition-transform duration-500 repeat-infinite" 
+                                    fill
+                                    className="rounded-lg object-cover hover:-rotate-12 transition-transform duration-500 repeat-infinite"
                                 />
+
                             </div>
                             <h3 className="text-xl font-semibold mb-2 text-center text-gray-900 dark:text-gray-100">
                                 {service.heading}

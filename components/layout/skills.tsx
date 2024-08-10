@@ -6,21 +6,25 @@ import SectionHeading from '../section-heading';
 import { fadeInAnimationVariants } from "@/lib/anim";
 import { useSectionInView } from "@/hooks/useSection";
 import Image from 'next/image';
+import Header from '../header';
 
 const SkillsSection = () => {
   const { ref } = useSectionInView("Skills");
-  
+
   return (
-    <section 
+    <section
       id="skills"
       ref={ref}
       className="mb-28 scroll-mt-28 text-center sm:mb-40"
     >
       <SectionHeading>My Skills</SectionHeading>
+      <p className="text-sm md:text-base lg:text-lg -mt-7 !font-normal text-gray-200 pb-7">
+        Over the past 2 years, I've been working consistently with some of these technologies, refining my expertise and delivering effective projects.
+      </p>
       {SKILLS_DATA.map((category, index) => (
         <div key={index} className="mb-8 flex flex-col ">
-          <h2 className="text-base font-medium mb-4">{category.category}</h2>
-          <ul className="grid grid-cols-2 sm:grid-cols-2 justify-items-center md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-5 max-w-screen-xl mx-auto">
+          <h2 className="text-base font-medium mb-4 text-gray-600">{category.category}</h2>
+          <ul className="grid grid-cols-2 sm:grid-cols-3 justify-items-center justify-between md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-5  mx-auto">
             {category.skills.map((skill, idx) => (
               <motion.li
                 key={idx}
@@ -31,19 +35,26 @@ const SkillsSection = () => {
                 viewport={{ once: true }}
                 custom={index}
               >
-                <div 
-                  className="flex items-center justify-center w-7 h-7 bg-opacity-50 rounded-lg"
-                  style={{ backgroundColor: skill.color }} 
+                <div
+                  className="flex justify-center w-7 h-7 bg-opacity-50 rounded-lg"
+                  style={{ backgroundColor: skill.color }}
                 >
-                  <Image 
-                    src={skill.logo} 
-                    alt={skill.name} 
+                  <Image
+                    src={skill.logo}
+                    alt={skill.name}
                     className='object-contain'
                     width={18}
-                    height={18} 
+                    height={18}
                   />
                 </div>
-                <span className="text-xs md:text-base ml-3">{skill.name}</span>
+                <div className="text-xs md:text-base pl-2">
+                  <span>{skill.name}</span>
+                  {skill.learning && (
+                    <p className="md:text-xs text-[10px] text-gray-500 ">Learning</p>
+                  )}
+                </div>
+               
+
               </motion.li>
             ))}
           </ul>
