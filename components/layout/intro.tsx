@@ -104,16 +104,17 @@ export default function Intro() {
                   setTimeOfLastClick(Date.now());
                 }}
               >
-                Contact Me{" "}
+                Contact Me
                 <BsArrowRight className="transition opacity-70 group-hover:translate-x-1" />
               </Link>
               <a
                 className="flex items-center gap-2 py-3 px-6 text-xs sm:text-sm md:text-base transition bg-white rounded-full borderBlack dark:bg-white/10"
-                href="#contact"
-              // download
+                href="/Mohamed amaan.pdf"
+              download
               >
                 Download CV <HiDownload className="transition opacity-60" />
               </a>
+
               <div className="flex gap-4 items-center">
                 <a
                   className="bg-white p-3 text-xs sm:text-sm md:text-base text-gray-700 hover:text-cmaccent rounded-full borderBlack dark:bg-white/10 dark:text-white/60"

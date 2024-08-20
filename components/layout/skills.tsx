@@ -6,7 +6,6 @@ import SectionHeading from '../section-heading';
 import { fadeInAnimationVariants } from "@/lib/anim";
 import { useSectionInView } from "@/hooks/useSection";
 import Image from 'next/image';
-import Header from '../header';
 
 const SkillsSection = () => {
   const { ref } = useSectionInView("Skills");
