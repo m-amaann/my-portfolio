@@ -17,7 +17,7 @@ export default function Services() {
             id="services"
             className="scroll-mt-28 w-full mb-28 sm:mb-40"
         >
-            <SectionHeading>What I Am Providing</SectionHeading>
+            <SectionHeading>What Services Providing</SectionHeading>
             <motion.div
                 variants={slideUp}
                 className="flex flex-col items-center justify-center gap-8 px-4 md:px-0"

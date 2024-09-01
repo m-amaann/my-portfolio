@@ -137,20 +137,23 @@ export const experiences = [
 
 export const educations = [
   {
-    title: "BEng (Hons) in Software Engineering (UK)",
+    title: "Degree  -  BEng (Hons) in Software Engineering",
     location: "Colombo 04, Sri Lanka",
-    institute: "London Metropolitan University",
+    institute: "London Metropolitan University - (UK)",
     iconUrl: "/images/logo/LMU.webp",
     date: "Feb 2020 - Jan 2024",
     url: "https://www.londonmet.ac.uk/",
+    describe: "Successfully completed the degree and was awarded First Class Honours."
+
   },
   {
     title: "Higher National Diploma in Software Engineering",
-    location: "Colombo, Sri Lanka",
+    location: "Colombo 04, Sri Lanka",
     institute: "BTEC Pearson UK",
     iconUrl: "/images/logo/Peason.png",
     date: "Jan 2021 - Sep 2022",
     url: "https://qualifications.pearson.com/en/home.html",
+    describe: "Completed the BTEC Higher National Diploma in Software Engineering with Distinction. Recognized and assured by Pearson UK."
   },
   {
     title: "Founational in Information Technology",
@@ -159,6 +162,7 @@ export const educations = [
     iconUrl: "/images/logo/IIT.png",
     date: "Mar 2018 - Feb 2019",
     url: "https://www.iit.ac.lk/",
+     describe: ""
   },
   {
     title: "GCE Ordinary Level and Advanced Level",
@@ -167,6 +171,7 @@ export const educations = [
     iconUrl: "/images/logo/royal-college-colomob.jpeg",
     date: "Jan 2007 - Nov 2019",
     url: "https://royalcollege.lk/",
+     describe: ""
   },
 ];
 

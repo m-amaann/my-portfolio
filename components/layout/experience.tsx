@@ -7,16 +7,17 @@ import { useTheme } from "next-themes";
 import { experiences, educations } from "@/lib/data";
 import Image from "next/image";
 import Link from "next/link";
+import Reveal from "../reveal";
 
 export default function Experience() {
   const { ref } = useSectionInView("Qualification");
 
   return (
     <section id="experience" ref={ref} className="scroll-mt-28 mb-28 sm:mb-40">
-      <SectionHeading>Experiences & Educations</SectionHeading>
+      <SectionHeading>My Experiences & Educations</SectionHeading>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div className="space-y-4">
-          <h3>Experiences</h3>
+          <h3>Work Experiences</h3>
           {experiences.map((item, index) => (
             <TimelineElement key={index} item={item} type="experience" />
           ))}
@@ -44,6 +45,7 @@ interface TimelineElementProps {
     iconUrl: string;
     institute?: string;
     url?: string;
+    describe?: string
   };
   type: string;
 }
@@ -108,6 +110,15 @@ function TimelineElement({ item, type }: TimelineElementProps) {
           <p className="text-xs text-neutral-500 dark:text-neutral-400 !mt-0 pt-1" style={{ fontSize: "13px" }}>{item.location}</p>
           {item.type && (
             <p className="text-xs text-neutral-500 flex-col md:flex-row lg:flex-row dark:text-neutral-400 block sm:hidden" style={{ fontSize: "13px" }}>{item.type}</p>
+          )}
+           {item.describe && (
+            <ul className="list-disc list-inside text-xs text-neutral-500 dark:text-neutral-400 mt-2">
+              {item.describe.split('\n').map((line, index) => (
+                <li key={index} style={{ fontSize: "13px" }}>
+                  {line}
+                </li>
+              ))}
+            </ul>
           )}
         </div>
       </div>

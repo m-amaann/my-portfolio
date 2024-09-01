@@ -72,7 +72,11 @@ export default function Intro() {
             </motion.div>
             <div className="flex flex-col uppercase">
               <div className="flex flex-row flex-wrap text-xl sm:text-2xl md:text-3xl lg:text-3xl pt-2 md:pt-3 lg:pt-4 xl:pt-4 font-bold leading-normal tracking-normal text-black dark:text-white">
-                <span className="flex-shrink-0 tracking-wider">Software Engineer</span>
+                <span
+                  className="flex-shrink-0 tracking-wider"
+                >
+                  Software Engineer
+                </span>
                 <span className="flex-shrink-0 tracking-wider">
                   <FlipWords words={flipwords} />
                 </span>
@@ -109,8 +113,8 @@ export default function Intro() {
               </Link>
               <a
                 className="flex items-center gap-2 py-3 px-6 text-xs sm:text-sm md:text-base transition bg-white rounded-full borderBlack dark:bg-white/10"
-                href="/Mohamed amaan.pdf"
-              download
+                href="/CV/Mohamed amaan.pdf"
+                target="_blank"
               >
                 Download CV <HiDownload className="transition opacity-60" />
               </a>

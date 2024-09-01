@@ -18,8 +18,22 @@ const SkillsSection = () => {
     >
       <SectionHeading>My Skills</SectionHeading>
       <p className="text-sm md:text-base lg:text-lg -mt-7 !font-normal text-black dark:text-gray-500 pb-7">
-        Over the past 2 years, I've been working consistently with some of these technologies, refining my expertise and delivering effective projects.
+        Over the past 2 years, I've been working consistently with some of these
+        <span className="relative inline-block pb-1 mx-1 after:absolute after:left-0 after:right-0 after:bottom-0 after:h-[1px] after:bg-yellow-300">
+          programming languages
+        </span>,
+        <span className="relative inline-block pb-1 mx-1 after:absolute after:left-0 after:right-0 after:bottom-0 after:h-[1px] after:bg-yellow-300">
+          technologies
+        </span>, and
+        <span className="relative inline-block pb-1 mx-1 after:absolute after:left-0 after:right-0 after:bottom-0 after:h-[1px] after:bg-yellow-300">
+          other tools
+        </span>.
+        Refining my expertise and delivering effective projects.
       </p>
+
+
+
+
       {SKILLS_DATA.map((category, index) => (
         <div key={index} className="mb-8 flex flex-col ">
           <h2 className="text-base font-medium mb-4 text-gray-600">{category.category}</h2>
@@ -52,7 +66,7 @@ const SkillsSection = () => {
                     <p className="md:text-xs text-[10px] text-gray-500 ">Learning</p>
                   )}
                 </div>
-               
+
 
               </motion.li>
             ))}
