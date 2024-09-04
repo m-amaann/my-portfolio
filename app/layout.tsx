@@ -8,6 +8,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import ThemeSwitch from "@/components/theme-switch";
 import ScrollProvider from "@/components/scroll-provider";
 import Footer from "@/components/footer";
+import WhatsAppChatWidget from "@/components/whatsapp-chat-widget";
 
 const barlow = Barlow({
   subsets: ["latin"],
@@ -57,6 +58,7 @@ export default function RootLayout({
             <SpeedInsights />
             <Footer />
             <Toaster position="top-right" />
+            <WhatsAppChatWidget/>
             <ThemeSwitch />
           </ThemeProvider>
         </ScrollProvider>

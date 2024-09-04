@@ -145,7 +145,6 @@ export default function Intro() {
       {/* Image Section */}
       <div className="w-full md:w-1/2 flex justify-center items-center mt-6 sm:mt-8 md:mt-0">
         <div className="w-full h-full flex justify-center items-center overflow-hidden">
-
           <Image
             src="/profile/PROFILE.png"
             className=" w-full h-auto"
@@ -153,7 +152,6 @@ export default function Intro() {
             height={300}
             alt="Profile Image"
           />
-
         </div>
       </div>
     </section>

@@ -32,17 +32,17 @@ const config = {
         '96': '24rem', 
       },
       width: {
-        "30": "30%", // Custom width class for 30%
+        "30": "30%", 
       },
       backgroundColor: {
-        "custom-rgba": "rgba(24, 34, 57, 0.83)", // Custom background color
+        "custom-rgba": "rgba(24, 34, 57, 0.83)", 
       },
       padding: {
-        "13px": "13px", // Custom padding
+        "13px": "13px", 
         "70px": "70px",
       },
       minHeight: {
-        "375px": "375px", // Custom minimum height
+        "375px": "375px", 
       },
       fontFamily: {
         barlow: "Barlow",
