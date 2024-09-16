@@ -1,5 +1,3 @@
-
-
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
@@ -11,15 +9,10 @@ import { useSectionInView } from "@/hooks/useSection";
 import { useSection } from "@/hooks/useSection";
 import { slideUpDesc, slideUpHeading } from "@/lib/anim";
 import Image from "next/image";
-import { FlipWords } from "../ui/flip-words";
-
-
 
 const words1 = ["Hi", "There,", "I'm"];
 const words2 = ["Mohamed", "Amaan"];
 const description: string = `A self-driven individual, aspiring to explore new horizons in the field of IT with an appetite for Full Stack Engineering.`;
-const flipwords = ["& UX Designer", "From Sri Lanka"];
-
 
 export default function Intro() {
   const { ref } = useSectionInView("Home");
@@ -64,7 +57,7 @@ export default function Intro() {
               {renderText(words1)} 👋
             </motion.div>
             <motion.div
-              className="flex text-2xl sm:text-2xl md:text-[38px] font-bold text-[#0458AC] leading-normal tracking-wide uppercase"
+              className="flex text-2xl sm:text-2xl md:text-[46px] font-bold text-[#0458AC] leading-normal tracking-wide uppercase"
               initial="hidden"
               animate="visible"
             >
@@ -72,17 +65,9 @@ export default function Intro() {
             </motion.div>
             <div className="flex flex-col uppercase">
               <div className="flex flex-row flex-wrap text-xl sm:text-2xl md:text-3xl lg:text-3xl pt-2 md:pt-3 lg:pt-4 xl:pt-4 font-bold leading-normal tracking-normal text-black dark:text-white">
-                <span
-                  className="flex-shrink-0 tracking-wider"
-                >
-                  Software Engineer
-                </span>
-                <span className="flex-shrink-0 tracking-wider">
-                  <FlipWords words={flipwords} />
-                </span>
+                <span className="flex-shrink-0 tracking-wider">Software Engineer</span>
               </div>
             </div>
-
 
             <motion.p
               className="text-[12px] sm:text-base md:text-base lg:text-lg leading-normal text-gray-500 py-4"
@@ -142,19 +127,34 @@ export default function Intro() {
         </div>
       </div>
 
-      {/* Image Section */}
-      <div className="w-full md:w-1/2 flex justify-center items-center mt-6 sm:mt-8 md:mt-0">
-        <div className="w-full h-full flex justify-center items-center overflow-hidden">
-          <Image
-            src="/profile/PROFILE.png"
-            className=" w-full h-auto"
-            width={300}
-            height={300}
-            alt="Profile Image"
-          />
+      {/* Image Section with Blob Animation */}
+      <div className="relative w-full md:w-1/2 flex justify-center items-center mt-6 sm:mt-8 md:mt-0">
+        <div className="relative">
+          {/* Animated Blob */}
+          <motion.div
+            className="absolute w-[300px] h-[300px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px] bg-gradient-to-r from-blue-100 via-[#c0dcf7] to-[#ddeeff] rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"
+            style={{ top: "-50px", left: "-50px" }}
+            initial={{ scale: 0.8 }}
+            animate={{ scale: [1, 1.2, 1], rotate: [0, 360, 0] }}
+            transition={{
+              duration: 10,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          ></motion.div>
+
+          {/* Circular Profile Image */}
+          <motion.div className="relative w-[200px] h-[200px] md:w-[300px] md:h-[300px] lg:w-[400px] lg:h-[400px] rounded-full overflow-hidden border-4 border-cmaccent">
+            <Image
+              src="/profile/image.png"
+              className="w-full h-full object-cover"
+              width={400}
+              height={400}
+              alt="Profile Image"
+            />
+          </motion.div>
         </div>
       </div>
     </section>
   );
 }
-
