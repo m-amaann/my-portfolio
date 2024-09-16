@@ -41,7 +41,7 @@ export default function Intro() {
       id="home"
       className="flex flex-col md:flex-row items-center justify-center px-4 py-8 sm:py-12 md:py-24 min-h-screen"
     >
-      <div className="flex flex-col mt-24 w-full md:w-1/2 text-left md:pr-16">
+      <div className="flex flex-col mt-12 w-full md:w-1/2 text-left md:pr-16">
         {/* Content Section */}
         <div className="mb-4 sm:mb-6 md:mb-8">
           <motion.div
