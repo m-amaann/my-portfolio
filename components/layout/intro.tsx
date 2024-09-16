@@ -146,7 +146,7 @@ export default function Intro() {
           {/* Circular Profile Image */}
           <motion.div className="relative w-[200px] h-[200px] md:w-[300px] md:h-[300px] lg:w-[400px] lg:h-[400px] rounded-full overflow-hidden border-4 border-cmaccent">
             <Image
-              src="/profile/image.png"
+              src="/profile/main.jpeg"
               className="w-full h-full object-cover"
               width={400}
               height={400}
