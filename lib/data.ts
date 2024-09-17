@@ -74,7 +74,7 @@ export const services = [
 
 export const experiences = [
   {
-    title: "Full Stack Developer Intern",
+    title: "Software Engineer Intern",
     company: "Harriet (Pvt) Ltd",
     type: "Full Time",
     location: "Colombo 07, Sri Lanka",
@@ -86,7 +86,7 @@ export const experiences = [
     ],
     technology: ["React", "Next.js", "Typescript", "Javascript", "Woocommerce API", "AWS Amplify & EC2", "Flutter", ".Net Core", "Git", "GitLab", "JIRA"],
     iconUrl: "/images/logo/Harriet.png",
-    date: "Feb 2024 - Present",
+    date: "Feb 2024 - Sep 2024",
     url: "https://www.linkedin.com/company/harriet-shopping",
   },
   {
