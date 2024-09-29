@@ -74,6 +74,19 @@ export const services = [
 
 export const experiences = [
   {
+    title: "QA Engineer Intern",
+    company: "Insighture (Pvt) Ltd",
+    type: "Full Time",
+    location: "Colombo 04, Sri Lanka",
+    roles: [ 
+      "Currently working as a QA Engineer Intern, focusing on software testing and quality assurance.",
+    ],
+    technology: [],
+    iconUrl: "/images/logo/INSIGHTURE.png",
+    date: "Oct 2024 - Present",
+    url: "https://www.insighture.com",
+  },
+  {
     title: "Software Engineer Intern",
     company: "Harriet (Pvt) Ltd",
     type: "Full Time",
@@ -92,7 +105,7 @@ export const experiences = [
   {
     title: "Freelancer",
     company: "CodexLab Software Consultant",
-    type: "",
+    type: "Part Time",
     location: "",
     roles: [
       "Developed custom software solutions tailored to specific clients requirements.",
@@ -100,7 +113,7 @@ export const experiences = [
     ],
     technology: ["MERN Stack", "Next.js", "WordPress", "Spring boot", "SaaS Application", "Mobile Application"],
     iconUrl: "/images/logo/codexlab.png",
-    date: "Oct 2023 - Present",
+    date: "Oct 2023 - Jul 2024",
     url: "https://www.codexlab.tech/",
   },
   {
