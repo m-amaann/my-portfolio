@@ -65,7 +65,7 @@ export default function Intro() {
             </motion.div>
             <div className="flex flex-col uppercase">
               <div className="flex flex-row flex-wrap text-xl sm:text-2xl md:text-3xl lg:text-3xl pt-2 md:pt-3 lg:pt-4 xl:pt-4 font-bold leading-normal tracking-normal text-black dark:text-white">
-                <span className="flex-shrink-0 tracking-wider">QA - Software Engineer</span>
+                <span className="flex-shrink-0 tracking-wider">Software Quality <br/>Engineer</span>
               </div>
             </div>
 

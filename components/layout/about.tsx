@@ -37,7 +37,7 @@ export default function About() {
               alt="Me"
               width={600}
               height={600}
-              layout="responsive"
+              
             />
           </div>
         </div>
@@ -49,15 +49,15 @@ export default function About() {
           </p>
 
           {/* Tab Navigation */}
-          <div className="tabs flex justify-start gap-4 mt-6 mb-6">
+          <div className="tabs flex justify-start gap-4 mt-3 mb-4">
             <button
-              className={`relative px-4 py-2 rounded-md ${activeTab === "contact" ? "bg-[#0458AC] text-white" : "bg-gray-200 text-gray-700"}`}
+              className={`relative p-2 rounded-md ${activeTab === "contact" ? "bg-[#0458AC] text-white" : "bg-gray-200 text-gray-700"}`}
               onClick={() => setActiveTab("contact")}
             >
               Contact Info
             </button>
             <button
-              className={`relative px-4 py-2 rounded-md ${activeTab === "certifications" ? "bg-[#0458AC] text-white" : "bg-gray-200 text-gray-700"}`}
+              className={`relative p-2 rounded-md ${activeTab === "certifications" ? "bg-[#0458AC] text-white" : "bg-gray-200 text-gray-700"}`}
               onClick={() => setActiveTab("certifications")}
             >
               Certifications
@@ -105,14 +105,14 @@ export default function About() {
                     onClick={() => setCertType("professional")}
                   >
                     Professional
-                    <span className={`absolute left-0 bottom-0 h-[2px] w-full bg-blue-500 transition-all duration-300 ${certType === "professional" ? "w-full" : "w-0"}`} />
+                    <span className={`absolute left-0 bottom-0 w-full  transition-all duration-300 ${certType === "professional" ? "w-full" : "w-0"}`} />
                   </button>
                   <button
-                    className={`relative text-sm text-gray-600 focus:outline-none group ${certType === "e-learning" ? "font-semibold" : ""}`}
+                    className={`relative text-sm text-gray-600  p-1 focus:outline-none group ${certType === "e-learning" ? "font-semibold" : ""}`}
                     onClick={() => setCertType("e-learning")}
                   >
                     E-Learning
-                    <span className={`absolute left-0 bottom-0 h-[2px] w-full bg-blue-500 transition-all duration-300 ${certType === "e-learning" ? "w-full" : "w-0"}`} />
+                    <span className={`absolute left-0 bottom-0  transition-all duration-300 ${certType === "e-learning" ? "w-full" : "w-0"}`} />
                   </button>
                 </div>
 
@@ -128,7 +128,7 @@ export default function About() {
                         </Link>
                       </span>
                     </li>
-                    {/* Add more professional certificates here */}
+                    
                   </ul>
                 )}
 
