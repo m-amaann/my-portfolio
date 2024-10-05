@@ -169,7 +169,7 @@ export const educations = [
     describe: "Completed the BTEC Higher National Diploma in Software Engineering with Distinction. Recognized and assured by Pearson UK."
   },
   {
-    title: "Founational in Information Technology",
+    title: "Founation in Information Technology",
     location: "Colombo, Sri Lanka",
     institute: "Informatics Institute of Technology",
     iconUrl: "/images/logo/IIT.png",
