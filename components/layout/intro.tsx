@@ -98,7 +98,7 @@ export default function Intro() {
               </Link>
               <a
                 className="flex items-center gap-2 py-3 px-6 text-xs sm:text-sm md:text-base transition bg-white rounded-full borderBlack dark:bg-white/10"
-                href="/CV/amaan.pdf"
+                href="/CV/Mohamed amaan.pdf"
                 target="_blank"
               >
                 Download CV <HiDownload className="transition opacity-60" />
@@ -146,7 +146,7 @@ export default function Intro() {
           {/* Circular Profile Image */}
           <motion.div className="relative w-[200px] h-[200px] md:w-[300px] md:h-[300px] lg:w-[400px] lg:h-[400px] rounded-full overflow-hidden border-4 border-cmaccent">
             <Image
-              src="/profile/main.jpeg"
+              src="/profile/Default.png"
               className="w-full h-full object-cover"
               width={400}
               height={400}

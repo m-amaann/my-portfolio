@@ -81,7 +81,7 @@ export const experiences = [
     roles: [ 
       "Currently working as a QA Engineer Intern, focusing on software testing and quality assurance.",
     ],
-    technology: [],
+    technology: ["Playwright", "Git", "Typescript", "Automation Script", "GitHub", "CI/CD Workflows", "AWS EC2", "AWS ECR", "AWS EKS", "Kubernetes", "Test Case Management", "Test Design", "Test Plan", "JIRA", "Minikube"],
     iconUrl: "/images/logo/INSIGHTURE.png",
     date: "Oct 2024 - Present",
     url: "https://www.insighture.com",
@@ -149,6 +149,16 @@ export const experiences = [
 
 
 export const educations = [
+  {
+    title: "MSc in Information Technology",
+    location: "Colombo, Sri Lanka",
+    institute: "Informatics Institute of Technology",
+    iconUrl: "/images/logo/IIT.png",
+    date: "Mar 2025 - Present",
+    url: "https://www.londonmet.ac.uk/",
+    describe: "Successfully completed the degree and was awarded First Class Honours."
+
+  },
   {
     title: "Degree  -  BEng (Hons) in Software Engineering",
     location: "Colombo 04, Sri Lanka",
@@ -292,15 +302,28 @@ export const SKILLS_DATA = [
       { name: "Git", logo: "/images/SKILLS/social.png", color: "#ED9A8F" },
       { name: "Github", logo: "/images/SKILLS/github.png", color: "#D0D0D0" },
       { name: "GitLab", logo: "/images/SKILLS/gitlab.png", color: "#F69F8F" },
-      { name: "NPM", logo: "/images/SKILLS/programing.png", color: "#FFBDBD" },
-      { name: "Postman", logo: "/images/SKILLS/postman.png", color: "#F7931E" }, 
-      { name: "Jenkins", logo: "/images/SKILLS/jenkins.png", color: "#0070C0" }, 
-      { name: "AWS Cloud", logo: "/images/SKILLS/AWS_2.png", color: "#fcb96c", learning: true }, 
-      { name: "JIRA", logo: "/images/SKILLS/jira.png", color: "#69A3F9" },
+      { name: "NPM", logo: "/images/SKILLS/programing.png", color: "#FFBDBD" }, 
+      { name: "AWS Cloud", logo: "/images/SKILLS/AWS_2.png", color: "#fcb96c" }, 
       { name: "Wordpress", logo: "/images/SKILLS/wordpress.png", color: "#9AC3D0" }, 
       { name: "CI/CD Pipelines", logo: "/images/SKILLS/CI_CD.png", color: "#B4D2E4" }, 
       { name: "Docker", logo: "/images/SKILLS/docker.png", color: "#99BFD7" },
       { name: "Kubernetes", logo: "/images/SKILLS/kubernetes.svg", color: "#799CE4", learning: true },
+    ],
+  },
+
+  {
+    category: "QA | Testing",
+    skills: [
+      { name: "Playwright", logo: "/images/SKILLS/playwright.png", color: "#D0D0D0" },
+      { name: "Cypress", logo: "/images/SKILLS/cypress-1.svg", color: "#afedd3" }, 
+      { name: "Selenium", logo: "/images/SKILLS/selenium.png", color: "#ED9A8F" },
+      { name: "BDD Cucumber", logo: "/images/SKILLS/bdd.png", color: "#D0D0D0" },
+      { name: "UAT", logo: "/images/SKILLS/picture.png", color: "#F69F8F" },
+      { name: "Regression", logo: "/images/SKILLS/picture.png", color: "#FFBDBD" },
+      { name: "Postman", logo: "/images/SKILLS/postman.png", color: "#F7931E" }, 
+      { name: "Jenkins", logo: "/images/SKILLS/jenkins.png", color: "#0070C0" }, 
+      { name: "JIRA", logo: "/images/SKILLS/jira.png", color: "#69A3F9" },
+      { name: "Functional Testing", logo: "/images/SKILLS/picture.png", color: "#f1f1f1" },
     ],
   },
 ];
