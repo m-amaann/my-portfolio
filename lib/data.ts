@@ -156,7 +156,7 @@ export const educations = [
     iconUrl: "/images/logo/IIT.png",
     date: "Mar 2025 - Present",
     url: "https://www.londonmet.ac.uk/",
-    describe: "Successfully completed the degree and was awarded First Class Honours."
+    describe: ""
 
   },
   {
