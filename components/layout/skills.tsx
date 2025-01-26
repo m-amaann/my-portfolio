@@ -33,7 +33,6 @@ const SkillsSection = () => {
 
 
 
-
       {SKILLS_DATA.map((category, index) => (
         <div key={index} className="mb-8 flex flex-col ">
           <h2 className="text-base font-medium mb-4 text-gray-600">{category.category}</h2>
@@ -56,8 +55,8 @@ const SkillsSection = () => {
                     src={skill.logo}
                     alt={skill.name}
                     className='object-contain'
-                    width={18}
-                    height={18}
+                    width={20}
+                    height={20}
                   />
                 </div>
                 <div className="text-xs md:text-base pl-2">

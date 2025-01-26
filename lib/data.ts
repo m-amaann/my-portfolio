@@ -157,7 +157,6 @@ export const educations = [
     date: "Mar 2025 - Present",
     url: "https://www.londonmet.ac.uk/",
     describe: ""
-
   },
   {
     title: "Degree  -  BEng (Hons) in Software Engineering",
@@ -305,7 +304,6 @@ export const SKILLS_DATA = [
       { name: "NPM", logo: "/images/SKILLS/programing.png", color: "#FFBDBD" }, 
       { name: "AWS Cloud", logo: "/images/SKILLS/AWS_2.png", color: "#fcb96c" }, 
       { name: "Wordpress", logo: "/images/SKILLS/wordpress.png", color: "#9AC3D0" }, 
-      { name: "CI/CD Pipelines", logo: "/images/SKILLS/CI_CD.png", color: "#B4D2E4" }, 
       { name: "Docker", logo: "/images/SKILLS/docker.png", color: "#99BFD7" },
       { name: "Kubernetes", logo: "/images/SKILLS/kubernetes.svg", color: "#799CE4", learning: true },
     ],
@@ -316,13 +314,15 @@ export const SKILLS_DATA = [
     skills: [
       { name: "Playwright", logo: "/images/SKILLS/playwright.png", color: "#D0D0D0" },
       { name: "Cypress", logo: "/images/SKILLS/cypress-1.svg", color: "#afedd3" }, 
-      { name: "Selenium", logo: "/images/SKILLS/selenium.png", color: "#ED9A8F" },
+      { name: "Selenium", logo: "/images/SKILLS/selenium.png", color: "#afedd3" },
       { name: "BDD Cucumber", logo: "/images/SKILLS/bdd.png", color: "#D0D0D0" },
-      { name: "UAT", logo: "/images/SKILLS/picture.png", color: "#F69F8F" },
-      { name: "Regression", logo: "/images/SKILLS/picture.png", color: "#FFBDBD" },
+      { name: "UAT", logo: "/images/SKILLS/picture.png", color: "#f1f1f1" },
+      { name: "CI/CD Pipelines", logo: "/images/SKILLS/CI_CD.png", color: "#B4D2E4" }, 
+      { name: "Regression", logo: "/images/SKILLS/picture.png", color: "#f1f1f1" },
       { name: "Postman", logo: "/images/SKILLS/postman.png", color: "#F7931E" }, 
       { name: "Jenkins", logo: "/images/SKILLS/jenkins.png", color: "#0070C0" }, 
       { name: "JIRA", logo: "/images/SKILLS/jira.png", color: "#69A3F9" },
+      { name: "TestNG", logo: "/images/SKILLS/testng.png", color: "#f1f1f1" },
       { name: "Functional Testing", logo: "/images/SKILLS/picture.png", color: "#f1f1f1" },
     ],
   },

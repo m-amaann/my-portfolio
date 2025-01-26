@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
-import { FaGithubSquare } from "react-icons/fa";
+import { FaGithubSquare, FaBlogger, FaBlog } from "react-icons/fa";
 import { useSectionInView } from "@/hooks/useSection";
 import { useSection } from "@/hooks/useSection";
 import { slideUpDesc, slideUpHeading } from "@/lib/anim";
@@ -57,17 +57,20 @@ export default function Intro() {
               {renderText(words1)} 👋
             </motion.div>
             <motion.div
-              className="flex text-2xl sm:text-2xl md:text-[46px] font-bold text-[#0458AC] leading-normal tracking-wide uppercase"
+              className="flex text-3xl sm:text-2xl md:text-[46px] font-bold text-[#0458AC] tracking-wide uppercase"
               initial="hidden"
               animate="visible"
             >
               {renderText(words2)}
             </motion.div>
-            <div className="flex flex-col uppercase">
+            <motion.div className="flex flex-col uppercase">
               <div className="flex flex-row flex-wrap text-xl sm:text-2xl md:text-3xl lg:text-3xl pt-2 md:pt-3 lg:pt-4 xl:pt-4 font-bold leading-normal tracking-normal text-black dark:text-white">
-                <span className="flex-shrink-0 tracking-wider">Software Quality <br/>Engineer</span>
+                <span className="flex-shrink-0 tracking-wider">Software Quality</span>
+                <span className="w-full"></span> {/* Forces a line break */}
+                <span className="flex-shrink-0 tracking-wider">Engineer</span>
               </div>
-            </div>
+            </motion.div>
+
 
             <motion.p
               className="text-[12px] sm:text-base md:text-base lg:text-lg leading-normal text-gray-500 py-4"
@@ -79,7 +82,7 @@ export default function Intro() {
               {description}
             </motion.p>
             <motion.div
-              className="flex flex-wrap items-center gap-4 text-sm sm:text-base md:text-lg lg:text-xl font-medium"
+              className="flex flex-wrap items-center gap-3 text-sm sm:text-base md:text-lg lg:text-xl font-medium"
               initial="hidden"
               animate="visible"
               variants={slideUpDesc}
@@ -104,7 +107,7 @@ export default function Intro() {
                 Download CV <HiDownload className="transition opacity-60" />
               </a>
 
-              <div className="flex gap-4 items-center">
+              <div className="flex gap-2 items-center">
                 <a
                   className="bg-white p-3 text-xs sm:text-sm md:text-base text-gray-700 hover:text-cmaccent rounded-full borderBlack dark:bg-white/10 dark:text-white/60"
                   href="https://www.linkedin.com/in/mohamed-amaan"
@@ -120,6 +123,14 @@ export default function Intro() {
                   rel="noopener noreferrer"
                 >
                   <FaGithubSquare />
+                </a>
+                <a
+                  className="bg-white p-3 text-xs sm:text-sm md:text-base text-gray-700 rounded-full borderBlack dark:bg-white/10 dark:text-white/60"
+                  href="https://codeelevate.blog/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaBlogger />
                 </a>
               </div>
             </motion.div>
