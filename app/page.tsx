@@ -12,6 +12,7 @@ import { TracingBeam } from "@/components/ui/tracing-beam";
 import Header from "@/components/header";
 import Preloader from "@/components/preloader";
 import Services from "@/components/layout/services";
+import Blogs from "@/components/layout/blogs";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -42,6 +43,7 @@ export default function Home() {
         <Projects />
         <Experience />
         <Skills />
+        <Blogs />
         <Services />
         <Contact />
       </TracingBeam>

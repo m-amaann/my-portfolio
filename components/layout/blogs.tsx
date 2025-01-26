@@ -1,85 +1,117 @@
-// import React, { useEffect, useState } from 'react';
-// import SectionHeading from '../section-heading';
-// import Image from 'next/image';
+import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
+import SectionHeading from '../section-heading';
 
-// interface BlogFields {
-//     title: string;
-//     date: string;
-//     excerpt: string;
-//     url: string;
-//     image?: {
-//         fields: {
-//             file: {
-//                 url: string;
-//             };
-//             title?: string;
-//         };
-//     }[];
-// }
+interface BlogFields {
+    title: string;
+    date: string;
+    excerpt: string;
+    link: string;
+    featured_media_url?: string;
+    category: string;
+    author: string;
+}
 
-// interface ContentfulResponse {
-//     items: Array<{
-//         sys: {
-//             id: string;
-//         };
-//         fields: BlogFields;
-//     }>;
-// }
+function decodeHtmlEntities(text: string): string {
+    const textArea = document.createElement('textarea');
+    textArea.innerHTML = text;
+    return textArea.value;
+}
 
-// export default function Blogs() {
-//     const [blogs, setBlogs] = useState<BlogFields[]>([]);
+export default function Blogs() {
+    const [blogs, setBlogs] = useState<BlogFields[]>([]);
+    const [visible, setVisible] = useState<BlogFields[]>([]);
+    const [showAll, setShowAll] = useState(false);
 
-//     useEffect(() => {
-//         const API_URL = `https://cdn.contentful.com/spaces/yt2sw3usxlu4/environments/master/entries`;
+    useEffect(() => {
+        const API_URL = 'https://codeelevate.blog/wp-json/wp/v2/posts?_embed';
 
-//         fetch(API_URL, {
-//             headers: {
-//                 'Authorization': `Bearer QznN0OuJnnFi2LL4g07sGdSibA2obSXO-663KkfG1Gw`,
-//                 'Content-Type': 'application/json'
-//             }
-//         })
-//         .then(response => response.json())
-//         .then((data: ContentfulResponse) => {
-//             const blogPosts = data.items.map(item => item.fields);
-//             setBlogs(blogPosts);
-//         })
-//         .catch(error => {
-//             console.error('Error fetching data:', error);
-//         });
-//     }, []);
+        fetch(API_URL)
+            .then(res => res.json())
+            .then(data => {
+                // Sort posts by date (most recent first)
+                const sortedPosts = data.sort((a: any, b: any) =>
+                    new Date(b.date).getTime() - new Date(a.date).getTime()
+                );
 
-//     console.log('Blogs:', blogs);
+                const posts = sortedPosts.map((post: any) => ({
+                    title: post.title.rendered,
+                    date: post.date,
+                    excerpt: post.excerpt.rendered.replace(/<\/?p>/g, ''),
+                    link: post.link,
+                    featured_media_url: post._embedded?.["wp:featuredmedia"]?.[0]?.source_url,
+                    // Decode HTML entities and exclude "Frontend"
+                    category: post._embedded?.['wp:term']?.[0]
+                        ?.filter((term: any) => term.name.toLowerCase() !== 'frontend')
+                        .map((term: any) => decodeHtmlEntities(term.name))
+                        .join(', ') || 'Uncategorized',
+                    author: post._embedded?.author?.[0]?.name || 'Unknown Author'
+                }));
 
-//     return (
-//         <section
-//             className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mb-28"
-//             id="blogs"
-//         >
-//             <SectionHeading>Recent Blogs</SectionHeading>
-//             <div className="flex justify-center gap-y-8 lg:gap-y-0 flex-wrap md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between lg:gap-x-8">
-//                 {blogs.map((blog, index) => (
-//                     <div key={index} className="group w-full max-lg:max-w-xl lg:w-1/3 border border-gray-300 rounded-2xl">
-//                         <div className="flex items-center">
-//                             {blog.image && blog.image.length > 0 && (
-//                                 <Image
-//                                     src={blog.image[1]?.fields?.file?.url || 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fdevelopers.elementor.com%2Fdocs%2Fhooks%2Fplaceholder-image%2F&psig=AOvVaw2IUqleaVLcIYtD5wcv1Ke_&ust=1723998778335000&source=images&cd=vfe&opi=89978449&ved=0CBUQ3YkBahcKEwiQ0OiHuvyHAxUAAAAAHQAAAAAQBA'} // Use a default image if the URL is not available
-//                                     alt={blog.image[0]?.fields?.title || blog.title}
-//                                     layout="responsive"
-//                                     width={500}  // Adjust based on your design
-//                                     height={300} // Adjust based on your design
-//                                     className="rounded-t-2xl"
-//                                 />
-//                             )}
-//                         </div>
-//                         <div className="p-4 lg:p-6 transition-all duration-300 rounded-b-2xl group-hover:bg-gray-50">
-//                             <span className="text-indigo-600 font-medium mb-3 block">{new Date(blog.date).toLocaleDateString()}</span>
-//                             <h4 className="text-xl text-white font-medium leading-8 mb-5">{blog.title}</h4>
-//                             <p className="text-gray-500 leading-6 mb-10">{blog.excerpt}</p>
-//                             <a href={blog.url} className="cursor-pointer text-lg text-indigo-600 font-semibold">Read more..</a>
-//                         </div>
-//                     </div>
-//                 ))}
-//             </div>
-//         </section>
-//     );
-// }
+                setBlogs(posts);
+                setVisible(posts.slice(0, 3));
+            })
+            .catch(err => console.error('Error:', err));
+    }, []);
+
+    const seeAll = () => {
+        setShowAll(true);
+        setVisible(blogs);
+    };
+
+    return (
+        <div className="container mx-auto px-2">
+            <SectionHeading>Recent Blogs</SectionHeading>
+            <div className="grid md:grid-cols-3 gap-6">
+                {visible.map((blog, i) => (
+                    <div key={i} className="bg-white shadow-md rounded-lg overflow-hidden">
+                        {blog.featured_media_url && (
+                            <div className="relative w-full h-48">
+                                <Image
+                                    src={blog.featured_media_url}
+                                    alt={blog.title}
+                                    fill
+                                    className="object-cover"
+                                    priority={i < 3}
+                                />
+                            </div>
+                        )}
+                        <div className="p-4">
+                            <span className="text-sm text-gray-600 mb-2 block">
+                                {blog.category}
+                            </span>
+                            <h3 className="text-lg font-semibold mb-2">
+                                {blog.title}
+                            </h3>
+                            <div className="text-sm text-gray-500 mb-2">
+                                By {blog.author} | {new Date(blog.date).toLocaleDateString()}
+                            </div>
+                            <p
+                                className="text-gray-600 mb-4 line-clamp-2"
+                                dangerouslySetInnerHTML={{ __html: blog.excerpt }}
+                            />
+                            <a
+                                href={blog.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-blue-600 hover:underline"
+                            >
+                                Read more...
+                            </a>
+                        </div>
+                    </div>
+                ))}
+            </div>
+            {!showAll && blogs.length > 3 && (
+                <div className="text-center mt-6">
+                    <button
+                        onClick={seeAll}
+                        className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+                    >
+                        See All Posts
+                    </button>
+                </div>
+            )}
+        </div>
+    );
+}
