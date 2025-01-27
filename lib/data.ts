@@ -74,16 +74,29 @@ export const services = [
 
 export const experiences = [
   {
+    title: "Associate Quality Engineer",
+    company: "Insighture (Pvt) Ltd",
+    type: "Contract - Full Time",
+    location: "Colombo 04, Sri Lanka",
+    roles: [ 
+      "Currently working as a QA Engineer, focusing on software testing and quality assurance.",
+    ],
+    technology: [],
+    iconUrl: "/images/logo/INSIGHTURE.png",
+    date: "Jan 2025 - Present",
+    url: "https://www.insighture.com",
+  },
+  {
     title: "QA Engineer Intern",
     company: "Insighture (Pvt) Ltd",
     type: "Full Time",
     location: "Colombo 04, Sri Lanka",
     roles: [ 
-      "Currently working as a QA Engineer Intern, focusing on software testing and quality assurance.",
+      
     ],
     technology: ["Playwright", "Git", "Typescript", "Automation Script", "GitHub", "CI/CD Workflows", "AWS EC2", "AWS ECR", "AWS EKS", "Kubernetes", "Test Case Management", "Test Design", "Test Plan", "JIRA", "Minikube"],
     iconUrl: "/images/logo/INSIGHTURE.png",
-    date: "Oct 2024 - Present",
+    date: "Oct 2024 - Jan 2025",
     url: "https://www.insighture.com",
   },
   {
@@ -116,20 +129,20 @@ export const experiences = [
     date: "Oct 2023 - Jul 2024",
     url: "https://www.codexlab.tech/",
   },
-  {
-    title: "UI/UX Designer",
-    company: "Freelancer.com",
-    location: "",
-    type: "Part Time",
-    technology: ["Figma", "Adobe XD"],
-    roles: [
-      "Created wireframes and prototypes using Figma",
-      "Collaborated with clients to understand their requirements",
-    ],
-    iconUrl: "/images/logo/upwork.jpeg",
-    date: "Jan 2021 - Oct 2021",
-    url: "https://www.freelancer.com/",
-  },
+  // {
+  //   title: "UI/UX Designer",
+  //   company: "Freelancer.com",
+  //   location: "",
+  //   type: "Part Time",
+  //   technology: ["Figma", "Adobe XD"],
+  //   roles: [
+  //     "Created wireframes and prototypes using Figma",
+  //     "Collaborated with clients to understand their requirements",
+  //   ],
+  //   iconUrl: "/images/logo/upwork.jpeg",
+  //   date: "Jan 2021 - Oct 2021",
+  //   url: "https://www.freelancer.com/",
+  // },
   {
     title: "Data Entry Operator",
     company: "Aegis Lanka (Pvt) Ltd",
