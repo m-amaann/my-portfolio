@@ -101,7 +101,8 @@ export default function Intro() {
               </Link>
               <a
                 className="flex items-center gap-2 py-3 px-6 text-xs sm:text-sm md:text-base transition bg-white rounded-full borderBlack dark:bg-white/10"
-                href="/CV/Mohamed amaan.pdf"
+                // href="/CV/Mohamed amaan.pdf"
+                href="https://www.linkedin.com/in/mohamed-amaan"
                 target="_blank"
               >
                 Download CV <HiDownload className="transition opacity-60" />
