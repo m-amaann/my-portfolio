@@ -89,7 +89,7 @@ export const experiences = [
   {
     title: "QA Engineer Intern",
     company: "Insighture (Pvt) Ltd",
-    type: "Full Time",
+    type: "Full-Time",
     location: "Colombo 04, Sri Lanka",
     roles: [ 
       
@@ -98,6 +98,27 @@ export const experiences = [
     iconUrl: "/images/logo/INSIGHTURE.png",
     date: "Oct 2024 - Jan 2025",
     url: "https://www.insighture.com",
+  },
+  {
+    title: "Software Developer",
+    company: "DevFortress",
+    type: "Full Time",
+    location: "Candada - Remote",
+    roles: [
+      "Primarily worked on the Node.js stack in a Full-Stack role, handling both backend and frontend development using React, Next.js",
+      "Built and maintained RESTful APIs for microservice-based backend architecture to support scalable and projects.",
+      "Managed AWS cloud, including deployment and configuration using EC2, ECR, RDS, and related services.",
+      "Implemented CI/CD pipelines and containerized applications using Docker for development and deployment workflows.",
+      "Designed and developed responsive UI components, ensuring optimal UI across devices and browsers.",
+      "Performed debugging and troubleshooting for performance issues, failures, and stability.",
+      "Coordinated tasks and milestones with QA teams, and wrote detailed test cases using QMetry.",
+      "Worked night shifts to align with the Sri Lankan time zone while operating remotely from Canada.",
+      "Participated in sprint planning, code reviews, and daily stand-ups to maintain team alignment and code quality."
+    ],
+    technology: ["React", "Next.js", "Typescript", "Javascript", "Kafka", "AWS EC2", "AWS ECR", "Docker", "RDS", "Git", "Github", "JIRA", "QMetry" ],
+    iconUrl: "/images/logo/devfortress_logo.jpeg",
+    date: "May 2024 - Sep 2024",
+    url: "https://www.linkedin.com/company/devfortress",
   },
   {
     title: "Software Engineer Intern",
@@ -112,7 +133,7 @@ export const experiences = [
     ],
     technology: ["React", "Next.js", "Typescript", "Javascript", "Woocommerce API", "AWS Amplify & EC2", "Flutter", ".Net Core", "Git", "GitLab", "JIRA"],
     iconUrl: "/images/logo/Harriet.png",
-    date: "Feb 2024 - Sep 2024",
+    date: "Feb 2024 - Aug 2024",
     url: "https://www.linkedin.com/company/harriet-shopping",
   },
   {
@@ -191,7 +212,7 @@ export const educations = [
     describe: "Completed the BTEC Higher National Diploma in Software Engineering with Distinction. Recognized and assured by Pearson UK."
   },
   {
-    title: "Founation in Information Technology",
+    title: "Foundation in Information Technology",
     location: "Colombo, Sri Lanka",
     institute: "Informatics Institute of Technology",
     iconUrl: "/images/logo/IIT.png",
