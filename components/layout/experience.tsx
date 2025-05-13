@@ -67,7 +67,7 @@ function TimelineElement({ item, type }: TimelineElementProps) {
             alt={item.title}
             width={40}
             height={40}
-            className="rounded-full "
+            className="rounded-full"
             style={{ objectFit: 'cover' }}
           />
 
@@ -130,7 +130,7 @@ function TimelineElement({ item, type }: TimelineElementProps) {
       <div className="flex-1 md:pl-16 lg:pl-16 xl:pl-16">
         {type === "experience" && item.roles && (
           <>
-            <ul className="list-disc list-inside mt-3" style={{ textAlign: "justify" }}>
+            <ul className="list-disc list-inside mt-3" style={{ textAlign: "justify"}}>
               {item.roles.map((role, index) => (
                 <li
                   key={index}
