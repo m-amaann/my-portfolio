@@ -59,7 +59,7 @@ export default function Blogs() {
                 );
 
                 const posts: BlogFields[] = sortedPosts.map((post) => ({
-                    title: post.title.rendered,
+                    title: decodeHtmlEntities(post.title.rendered),
                     date: post.date,
                     excerpt: post.excerpt.rendered.replace(/<\/?p>/g, ''),
                     link: post.link,
@@ -115,8 +115,8 @@ export default function Blogs() {
                     <button
                         key={index}
                         className={`px-4 py-2 rounded-full border text-sm ${selectedCategory === category
-                                ? 'bg-blue-500 text-white'
-                                : 'bg-white text-gray-700 border-gray-300'
+                            ? 'bg-blue-500 text-white'
+                            : 'bg-white text-gray-700 border-gray-300'
                             } hover:bg-blue-400 hover:text-white transition-all whitespace-nowrap`}
                         onClick={() => handleCategoryClick(category)}
                     >
@@ -146,7 +146,7 @@ export default function Blogs() {
                                 <span className="text-xs md:text-sm text-gray-600 mb-2 block">
                                     {blog.category}
                                 </span>
-                                <h3 className="text-base md:text-lg font-semibold mb-2">
+                                <h3 className="text-base md:text-lg font-semibold mb-2 text-black dark:text-black">
                                     {blog.title}
                                 </h3>
                                 <div className="text-xs md:text-sm text-gray-500 mb-2 flex items-center gap-2">
