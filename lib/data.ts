@@ -186,14 +186,14 @@ export const educations = [
   {
     title: "MSc in Information Technology",
     location: "Colombo, Sri Lanka",
-    institute: "Informatics Institute of Technology",
-    iconUrl: "/images/logo/IIT.png",
-    date: "Mar 2025 - Present",
+    institute: "SLIIT",
+    iconUrl: "/images/logo/sliit.png",
+    date: "Jun 2025 - Present",
     url: "https://www.londonmet.ac.uk/",
     describe: ""
   },
   {
-    title: "Degree  -  BEng (Hons) in Software Engineering",
+    title: "Bachelors of Engineering in (Software Engineer)",
     location: "Colombo 04, Sri Lanka",
     institute: "London Metropolitan University - (UK)",
     iconUrl: "/images/logo/LMU.webp",
