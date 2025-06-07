@@ -72,6 +72,7 @@ export default function Blogs() {
                         post._embedded?.author?.[0]?.avatar_urls?.['96'] || authorPlaceholderImage,
                 }));
 
+                
                 const uniqueCategories = Array.from(
                     new Set(
                         posts.flatMap((post) =>
