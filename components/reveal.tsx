@@ -12,7 +12,7 @@ interface RevealProps {
 }
 
 const Reveal = ({ children, el = "h1", className }: RevealProps) => {
-  const Element = el as keyof JSX.IntrinsicElements;
+  const Element: React.ElementType = el;
   const words = children.split(" ");
 
   const wrapperRef = useRef<HTMLSpanElement>(null);
