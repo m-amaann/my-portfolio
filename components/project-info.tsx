@@ -1,7 +1,6 @@
-import { useProjectStore } from "@/hooks/useStore";
 import { ProjectTypes } from "@/lib/types";
 import { useInView } from "framer-motion";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef } from "react";
 import Image from "next/image";
 
 const ProjectInfo = ({ project }: { project: ProjectTypes }) => {

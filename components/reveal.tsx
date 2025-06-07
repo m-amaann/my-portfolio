@@ -7,12 +7,12 @@ import { cn } from "@/lib/utils";
 
 interface RevealProps {
   children: string;
-  el?: keyof JSX.IntrinsicElements;
+  el?: React.ElementType;
   className?: string;
 }
 
 const Reveal = ({ children, el = "h1", className }: RevealProps) => {
-  const Element = el;
+  const Element = el as keyof JSX.IntrinsicElements;
   const words = children.split(" ");
 
   const wrapperRef = useRef<HTMLSpanElement>(null);
