@@ -45,8 +45,7 @@ export default function About() {
         {/* Text Section */}
         <div className="text-white md:px-6 lg:px-8 flex flex-col justify-start md:w-2/3">
           <p className="mt-6 text-gray-600 leading-relaxed pb-4 text-justify">
-            {/* As a Software Engineer with one year of working experience, I am a self-driven individual with a passion for exploring new horizons in the IT field. My expertise lies in crafting dynamic and engaging interfaces through writing clean code and utilizing cutting-edge development tools and techniques. With a strong foundation in both web and mobile development, I excel at creating user-centric applications that deliver seamless experiences. */}
-            2 Years of working experience in software engineering and testing in industry. Specializing in test automation, scripting, and effective QA strategies. I consider myself highly adaptable and flexible in any environment, with a proactive mindset toward delivering scalable, high-quality software solutions. Passionate about bridging the gap between development and QA to drive efficiency, accuracy, and innovation.
+            2 Years of working experience in Quality assurance and development in IT industry. Specializing in test automation scripting, effective QA strategies and methodolgy. I consider myself highly adaptable and flexible in any environment, with a proactive mindset toward delivering scalable, high-quality software solutions. Passionate about bridging the gap between development and QA to drive efficiency, accuracy, and innovation.
           </p>
 
           {/* Tab Navigation */}

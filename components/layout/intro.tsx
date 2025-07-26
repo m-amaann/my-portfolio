@@ -65,9 +65,9 @@ export default function Intro() {
             </motion.div>
             <motion.div className="flex flex-col uppercase">
               <div className="flex flex-row flex-wrap text-xl sm:text-2xl md:text-3xl lg:text-3xl pt-2 md:pt-3 lg:pt-4 xl:pt-4 font-bold leading-normal tracking-normal text-black dark:text-white">
-                <span className="flex-shrink-0 ">Software Engineer</span>
+                <span className="flex-shrink-0 ">Software QA Engineer</span>
                 <span className="w-full"></span> {/* Forces a line break */}
-                <span className="flex-shrink-0 text-sm sm:text-base text-gray-600 animate-pulse">(Full-Stack)</span>
+                <span className="flex-shrink-0 text-sm sm:text-base text-gray-600 animate-pulse">(Automation + Manual)</span>
               </div>
             </motion.div>
 
