@@ -75,7 +75,7 @@ export const services = [
 export const experiences = [
   {
     title: "Associate Quality Engineer",
-    company: "Insighture (Pvt) Ltd",
+    company: "Insighture",
     type: "Contract - Full Time",
     location: "Colombo 04, Sri Lanka",
     roles: [ 
@@ -88,7 +88,7 @@ export const experiences = [
   },
   {
     title: "QA Engineer Intern",
-    company: "Insighture (Pvt) Ltd",
+    company: "Insighture",
     type: "Full-Time",
     location: "Colombo 04, Sri Lanka",
     roles: [ 
@@ -100,7 +100,7 @@ export const experiences = [
     url: "https://www.insighture.com",
   },
   {
-    title: "Software Developer",
+    title: "Software Developer - NodeJs",
     company: "DevFortress",
     type: "Full Time",
     location: "Candada - Remote",
