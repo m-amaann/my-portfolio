@@ -13,6 +13,7 @@ import Header from "@/components/header";
 import Preloader from "@/components/preloader";
 import Services from "@/components/layout/services";
 import Blogs from "@/components/layout/blogs";
+import GithubRepos from "@/components/layout/github_repos";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -41,6 +42,7 @@ export default function Home() {
       <TracingBeam>
         <About />
         <Projects />
+        <GithubRepos />
         <Experience />
         <Skills />
         <Blogs />

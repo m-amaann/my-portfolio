@@ -53,18 +53,18 @@ export const services = [
     detail: "Developing high-performance mobile apps for both cross-platform.",
   },
   {
-    emoji: "/other/4799410-scaled.avif", 
+    emoji: "/other/4799410-scaled.avif",
     heading: "Web Developement",
     detail: "Building responsive and dynamic websites tailored to your business needs.",
   },
   {
-    emoji: "/other/cover.webp", 
-    heading: "UI/UX Design", 
+    emoji: "/other/cover.webp",
+    heading: "UI/UX Design",
     detail: "Designing intuitive and engaging user interfaces that enhance user experience.",
   },
   {
-    emoji: "/other/enterprise.avif", 
-    heading: "CMS Applications", 
+    emoji: "/other/enterprise.avif",
+    heading: "CMS Applications",
     detail: "Developing robust and scalable solutions to streamline complex business processes.",
   },
 ];
@@ -78,7 +78,7 @@ export const experiences = [
     company: "Insighture",
     type: "Contract - Full Time",
     location: "Colombo 04, Sri Lanka",
-    roles: [ 
+    roles: [
       "Currently working as a QA Engineer, focusing on software testing and quality assurance.",
     ],
     technology: [],
@@ -91,8 +91,8 @@ export const experiences = [
     company: "Insighture",
     type: "Full-Time",
     location: "Colombo 04, Sri Lanka",
-    roles: [ 
-      
+    roles: [
+
     ],
     technology: ["Playwright", "Git", "Typescript", "Automation Script", "GitHub", "CI/CD Workflows", "AWS EC2", "AWS ECR", "AWS EKS", "Kubernetes", "Test Case Management", "Test Design", "Test Plan", "JIRA", "Minikube"],
     iconUrl: "/images/logo/INSIGHTURE.png",
@@ -115,7 +115,7 @@ export const experiences = [
       "Worked night shifts to align with the Sri Lankan time zone while operating remotely from Canada.",
       "Participated in sprint planning, code reviews, and daily stand-ups to maintain team alignment and code quality."
     ],
-    technology: ["React", "Next.js", "Typescript", "Javascript", "Kafka", "AWS EC2", "AWS ECR", "Docker", "RDS", "Git", "Github", "JIRA", "QMetry" ],
+    technology: ["React", "Next.js", "Typescript", "Javascript", "Kafka", "AWS EC2", "AWS ECR", "Docker", "RDS", "Git", "Github", "JIRA", "QMetry"],
     iconUrl: "/images/logo/devfortress_logo.jpeg",
     date: "May 2024 - Sep 2024",
     url: "https://www.linkedin.com/company/devfortress",
@@ -218,7 +218,7 @@ export const educations = [
     iconUrl: "/images/logo/IIT.png",
     date: "Mar 2018 - Feb 2019",
     url: "https://www.iit.ac.lk/",
-     describe: ""
+    describe: ""
   },
   {
     title: "GCE Ordinary Level and Advanced Level",
@@ -227,7 +227,7 @@ export const educations = [
     iconUrl: "/images/logo/royal-college-colomob.jpeg",
     date: "Jan 2007 - Nov 2019",
     url: "https://royalcollege.lk/",
-     describe: ""
+    describe: ""
   },
 ];
 
@@ -294,72 +294,71 @@ export const projects = [
 
 
 export const SKILLS_DATA = [
+  // {
+  //   category: "Frontend",
+  //   skills: [
+  //     { name: "React", logo: "/images/SKILLS/react.png", color: "#B8F0FF" },
+  //     { name: "Next.js", logo: "/images/SKILLS/next-js.png", color: "#000000" },
+  //     { name: "JavaScript", logo: "/images/SKILLS/JAVASCRIPT.png", color: "#fff082" },
+  //     { name: "Flutter", logo: "/images/SKILLS/flutter.png", color: "#B9DCF9", learning: true },
+  //     { name: "React Native", logo: "/images/SKILLS/react-native.png", color: "#0067FB" }, 
+  //     { name: "HTML", logo: "/images/SKILLS/html.png", color: "#F9A58E" },
+  //     { name: "CSS", logo: "/images/SKILLS/CSS.png", color: "#63B0E9" },
+  //     { name: "Tailwind CSS", logo: "/images/SKILLS/tailwind.png", color: "#97EFFF" },
+  //     { name: "Bootstrap", logo: "/images/SKILLS/bootstrap.png", color: "#B496DF" },
+  //   ],
+  // },
   {
-    category: "Frontend",
+    category: "Languages",
     skills: [
-      { name: "React", logo: "/images/SKILLS/react.png", color: "#B8F0FF" },
-      { name: "Next.js", logo: "/images/SKILLS/next-js.png", color: "#000000" },
-      { name: "JavaScript", logo: "/images/SKILLS/JAVASCRIPT.png", color: "#fff082" },
-      { name: "Flutter", logo: "/images/SKILLS/flutter.png", color: "#B9DCF9", learning: true },
-      { name: "React Native", logo: "/images/SKILLS/react-native.png", color: "#0067FB" }, 
-      { name: "HTML", logo: "/images/SKILLS/html.png", color: "#F9A58E" },
-      { name: "CSS", logo: "/images/SKILLS/CSS.png", color: "#63B0E9" },
-      { name: "Tailwind CSS", logo: "/images/SKILLS/tailwind.png", color: "#97EFFF" },
-      { name: "Bootstrap", logo: "/images/SKILLS/bootstrap.png", color: "#B496DF" },
-    ],
-  },
-  {
-    category: "Backend",
-    skills: [
-      { name: "Java", logo: "/images/SKILLS/JAVA.png", color: "#CBDDFF" }, 
-      { name: "Spring Boot", logo: "/images/SKILLS/spring-boot.png", color: "#AEE789" },
-      { name: "ASP.Net Core", logo: "/images/SKILLS/asp.net core.png", color: "#c08ef9" },
-      { name: "JavaEE", logo: "/images/SKILLS/javaEE.png", color: "#FFDBAA" }, 
+      { name: "Java", logo: "/images/SKILLS/JAVA.png", color: "#CBDDFF" },
+      { name: "C#", logo: "/images/SKILLS/csharp.png", color: "#A1B9E1" },
       { name: "TypeScript", logo: "/images/SKILLS/typescript.png", color: "#91C2F8" },
-      { name: "Node.js", logo: "/images/SKILLS/NODEJS.png", color: "#BBF0BB" },
-      { name: "Express", logo: "/images/SKILLS/EXPRESS.png", color: "#BBBBBB" }, 
-      { name: "Prisma", logo: "/images/SKILLS/prism.png", color: "#98B6C7" },
-      { name: "MongoDB", logo: "/images/SKILLS/MONGODB.png", color: "#AEEE9C" }, 
-      { name: "MySQL", logo: "/images/SKILLS/mySQL.png", color: "#ABDCF2" },
-      { name: "PostgreSQL", logo: "/images/SKILLS/postgre.png", color: "#A6CDED" }, 
-      { name: "Hibernate", logo: "/images/SKILLS/hibernate.png", color: "#E9DFB4" }, 
-      { name: "JPA/Servlet", logo: "/images/SKILLS/JAVA.png", color: "#CBDDFF" }, 
-      { name: "JDBC", logo: "/images/SKILLS/JDBC.png", color: "#D4D3CF" }, 
     ],
   },
   {
-    category: "Other",
+    category: "QA & Testing",
     skills: [
-      { name: "VS Code", logo: "/images/SKILLS/VSCODE.png", color: "#61BFFF" },
-      { name: "IntelliJ Idea", logo: "/images/SKILLS/Intellid-idea.png", color: "#84B1E4" }, 
-      { name: "Git", logo: "/images/SKILLS/social.png", color: "#ED9A8F" },
-      { name: "Github", logo: "/images/SKILLS/github.png", color: "#D0D0D0" },
-      { name: "GitLab", logo: "/images/SKILLS/gitlab.png", color: "#F69F8F" },
-      { name: "NPM", logo: "/images/SKILLS/programing.png", color: "#FFBDBD" }, 
-      { name: "AWS Cloud", logo: "/images/SKILLS/AWS_2.png", color: "#fcb96c" }, 
-      { name: "Wordpress", logo: "/images/SKILLS/wordpress.png", color: "#9AC3D0" }, 
-      { name: "Docker", logo: "/images/SKILLS/docker.png", color: "#99BFD7" },
-      { name: "Kubernetes", logo: "/images/SKILLS/kubernetes.svg", color: "#799CE4", learning: true },
-    ],
+      { name: "Manual Testing", logo: "/images/SKILLS/picture.png", color: "#f1f1f1" },
+      { name: "Test Case Design", logo: "/images/SKILLS/picture.png", color: "#f1f1f1" },
+      { name: "Test Planning", logo: "/images/SKILLS/picture.png", color: "#f1f1f1" },
+      { name: "Test Case Execution", logo: "/images/SKILLS/picture.png", color: "#f1f1f1" },
+      { name: "JIRA", logo: "/images/SKILLS/jira.png", color: "#69A3F9" },
+      { name: "TestRail", logo: "/images/SKILLS/testrail.png", color: "#5EB1F0" },
+      { name: "QMetry", logo: "/images/SKILLS/qmetry.png", color: "#F0F0F0" },
+    ]
   },
-
   {
-    category: "QA | Testing",
+    category: "Automation & CI/CD",
     skills: [
       { name: "Playwright", logo: "/images/SKILLS/playwright.png", color: "#D0D0D0" },
-      { name: "Cypress", logo: "/images/SKILLS/cypress-1.svg", color: "#afedd3" }, 
+      { name: "Cypress", logo: "/images/SKILLS/cypress-1.svg", color: "#afedd3" },
       { name: "Selenium", logo: "/images/SKILLS/selenium.png", color: "#afedd3" },
+      { name: "Appium", logo: "/images/SKILLS/appium.png", color: "#9DE0F6" },
+      { name: "Postman", logo: "/images/SKILLS/postman.png", color: "#F7931E" },
       { name: "BDD Cucumber", logo: "/images/SKILLS/bdd.png", color: "#D0D0D0" },
-      { name: "UAT", logo: "/images/SKILLS/picture.png", color: "#f1f1f1" },
-      { name: "CI/CD Pipelines", logo: "/images/SKILLS/CI_CD.png", color: "#B4D2E4" }, 
-      { name: "Regression", logo: "/images/SKILLS/picture.png", color: "#f1f1f1" },
-      { name: "Postman", logo: "/images/SKILLS/postman.png", color: "#F7931E" }, 
-      { name: "Jenkins", logo: "/images/SKILLS/jenkins.png", color: "#0070C0" }, 
-      { name: "JIRA", logo: "/images/SKILLS/jira.png", color: "#69A3F9" },
-      { name: "TestNG", logo: "/images/SKILLS/testng.png", color: "#f1f1f1" },
-      { name: "Functional Testing", logo: "/images/SKILLS/picture.png", color: "#f1f1f1" },
-    ],
+      { name: "Jenkins", logo: "/images/SKILLS/jenkins.png", color: "#0070C0" },
+      { name: "CI/CD Pipelines", logo: "/images/SKILLS/CI_CD.png", color: "#B4D2E4" },
+      { name: "GitHub Actions", logo: "/images/SKILLS/github.png", color: "#B6BAC1" }
+    ]
   },
+  {
+    category: "Performance Testing",
+    skills: [
+      { name: "JMeter", logo: "/images/SKILLS/jmeter.png", color: "#F1936B" },
+      { name: "K6", logo: "/images/SKILLS/k6.png", color: "#C8D3F5" },
+    ]
+  },
+  {
+    category: "Cloud & DevOps",
+    skills: [
+      { name: "AWS", logo: "/images/SKILLS/AWS_2.png", color: "#fcb96c" },
+      { name: "Docker", logo: "/images/SKILLS/docker.png", color: "#99BFD7" },
+      { name: "Kubernetes", logo: "/images/SKILLS/kubernetes.svg", color: "#799CE4", learning: true },
+      { name: "Git", logo: "/images/SKILLS/social.png", color: "#ED9A8F" },
+      { name: "GitHub", logo: "/images/SKILLS/github.png", color: "#D0D0D0" },
+    ]
+  }
 ];
 
 
