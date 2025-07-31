@@ -312,7 +312,7 @@ export const SKILLS_DATA = [
     category: "Languages",
     skills: [
       { name: "Java", logo: "/images/SKILLS/JAVA.png", color: "#CBDDFF" },
-      { name: "C#", logo: "/images/SKILLS/csharp.png", color: "#A1B9E1" },
+      { name: "C#", logo: "/images/SKILLS/picture.png", color: "#A1B9E1" },
       { name: "TypeScript", logo: "/images/SKILLS/typescript.png", color: "#91C2F8" },
     ],
   },
@@ -324,17 +324,16 @@ export const SKILLS_DATA = [
       { name: "Test Planning", logo: "/images/SKILLS/picture.png", color: "#f1f1f1" },
       { name: "Test Case Execution", logo: "/images/SKILLS/picture.png", color: "#f1f1f1" },
       { name: "JIRA", logo: "/images/SKILLS/jira.png", color: "#69A3F9" },
-      { name: "TestRail", logo: "/images/SKILLS/testrail.png", color: "#5EB1F0" },
-      { name: "QMetry", logo: "/images/SKILLS/qmetry.png", color: "#F0F0F0" },
+      { name: "TestRail",logo: "/images/SKILLS/picture.png", color: "#5EB1F0" },
+      { name: "QMetry", logo: "/images/SKILLS/picture.png", color: "#F0F0F0" },
     ]
   },
   {
     category: "Automation & CI/CD",
     skills: [
-      { name: "Playwright", logo: "/images/SKILLS/playwright.png", color: "#D0D0D0" },
-      { name: "Cypress", logo: "/images/SKILLS/cypress-1.svg", color: "#afedd3" },
       { name: "Selenium", logo: "/images/SKILLS/selenium.png", color: "#afedd3" },
-      { name: "Appium", logo: "/images/SKILLS/appium.png", color: "#9DE0F6" },
+      { name: "Playwright", logo: "/images/SKILLS/playwright.png", color: "#D0D0D0" },
+      { name: "Appium", logo: "/images/SKILLS/picture.png", color: "#9DE0F6" },
       { name: "Postman", logo: "/images/SKILLS/postman.png", color: "#F7931E" },
       { name: "BDD Cucumber", logo: "/images/SKILLS/bdd.png", color: "#D0D0D0" },
       { name: "Jenkins", logo: "/images/SKILLS/jenkins.png", color: "#0070C0" },
@@ -345,8 +344,8 @@ export const SKILLS_DATA = [
   {
     category: "Performance Testing",
     skills: [
-      { name: "JMeter", logo: "/images/SKILLS/jmeter.png", color: "#F1936B" },
-      { name: "K6", logo: "/images/SKILLS/k6.png", color: "#C8D3F5" },
+      { name: "JMeter", logo: "/images/SKILLS/picture.png", color: "#F1936B" },
+      { name: "K6", logo: "/images/SKILLS/picture.png", color: "#C8D3F5" },
     ]
   },
   {
@@ -354,7 +353,7 @@ export const SKILLS_DATA = [
     skills: [
       { name: "AWS", logo: "/images/SKILLS/AWS_2.png", color: "#fcb96c" },
       { name: "Docker", logo: "/images/SKILLS/docker.png", color: "#99BFD7" },
-      { name: "Kubernetes", logo: "/images/SKILLS/kubernetes.svg", color: "#799CE4", learning: true },
+      { name: "Kubernetes", logo: "/images/SKILLS/kubernetes.svg", color: "#799CE4" },
       { name: "Git", logo: "/images/SKILLS/social.png", color: "#ED9A8F" },
       { name: "GitHub", logo: "/images/SKILLS/github.png", color: "#D0D0D0" },
     ]

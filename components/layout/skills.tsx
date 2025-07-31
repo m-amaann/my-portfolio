@@ -36,7 +36,7 @@ const SkillsSection = () => {
       {SKILLS_DATA.map((category, index) => (
         <div key={index} className="mb-8 flex flex-col ">
           <h2 className="text-base font-medium mb-4 text-gray-600">{category.category}</h2>
-          <ul className="grid grid-cols-2 sm:grid-cols-3 justify-items-center justify-between md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-5  mx-auto">
+          <ul className="grid grid-cols-2 sm:grid-cols-3 justify-items-center justify-center items-center md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-5  mx-auto">
             {category.skills.map((skill, idx) => (
               <motion.li
                 key={idx}
@@ -61,9 +61,9 @@ const SkillsSection = () => {
                 </div>
                 <div className="text-xs md:text-base pl-2">
                   <span>{skill.name}</span>
-                  {skill.learning && (
-                    <p className="md:text-xs text-[10px] text-gray-500 ">Learning</p>
-                  )}
+                  {/* {skill.learning && (
+                    <span className="text-xs text-gray-500 ml-1">(Learning)</span>
+                  )} */}
                 </div>
 
 
