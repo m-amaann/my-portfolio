@@ -81,7 +81,7 @@ export const experiences = [
     roles: [
       "Currently working as a QA Engineer, focusing on software testing and quality assurance.",
     ],
-    technology: ["Selenium", "Playwright", "Java", "Automation Script", "Manual Testing", "Azure DevOps", "CI/CD Workflows", "AWS", "K6", "JIRA", "TestRail", "Test Plan", "Test Case Design", "Test Case Execution"],
+    technology: ["Selenium", "Playwright", "Java", "Automation Script","Appium Mobile", "Manual Testing", "Azure DevOps", "CI/CD Workflows", "AWS", "K6", "JIRA", "TestRail", "Test Plan", "Test Case Design", "Test Case Execution"],
     iconUrl: "/images/logo/INSIGHTURE.png",
     date: "Jan 2025 - Present",
     url: "https://www.insighture.com",
