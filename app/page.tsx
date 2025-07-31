@@ -45,7 +45,7 @@ export default function Home() {
         <Skills />
         <Projects />
         <Blogs />
-        <Services />
+        {/* <Services /> */}
         <Contact />
       </TracingBeam>
     </main>
