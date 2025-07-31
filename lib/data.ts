@@ -81,7 +81,7 @@ export const experiences = [
     roles: [
       "Currently working as a QA Engineer, focusing on software testing and quality assurance.",
     ],
-    technology: [],
+    technology: ["Selenium", "Playwright", "Java", "Automation Script", "Manual Testing", "GitHub", "CI/CD Workflows", "AWS", "K6", "JIRA", "TestRail", "Test Plan", "Test Case Design", "Test Case Execution"],
     iconUrl: "/images/logo/INSIGHTURE.png",
     date: "Jan 2025 - Present",
     url: "https://www.insighture.com",
@@ -324,7 +324,7 @@ export const SKILLS_DATA = [
       { name: "Test Planning", logo: "/images/SKILLS/picture.png", color: "#f1f1f1" },
       { name: "Test Case Execution", logo: "/images/SKILLS/picture.png", color: "#f1f1f1" },
       { name: "JIRA", logo: "/images/SKILLS/jira.png", color: "#69A3F9" },
-      { name: "TestRail",logo: "/images/SKILLS/picture.png", color: "#5EB1F0" },
+      { name: "TestRail", logo: "/images/SKILLS/picture.png", color: "#5EB1F0" },
       { name: "QMetry", logo: "/images/SKILLS/picture.png", color: "#F0F0F0" },
     ]
   },
