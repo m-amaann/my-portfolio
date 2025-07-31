@@ -40,9 +40,10 @@ export default function Home() {
       <SectionDivider />
       <TracingBeam>
         <About />
-        <Projects />
+        
         <Experience />
         <Skills />
+        <Projects />
         <Blogs />
         <Services />
         <Contact />
