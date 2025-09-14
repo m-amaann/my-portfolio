@@ -35,7 +35,7 @@ export const links = [
 
 export const aboutMe = {
   longDesc:
-    'As a Full Stack Engineer with 1.5 years of working experience, I am a self-driven individual with a passion for exploring new horizons in the IT field. My expertise lies in crafting dynamic and engaging interfaces through writing clean code and utilizing cutting-edge development tools and techniques. With a strong foundation in both web and mobile development, I excel at creating user-centric applications that deliver seamless experiences.',
+    'As a QA Engineer with 2 years of working experience, I am a self-driven individual with a passion for exploring new horizons in the IT field. My expertise lies in crafting dynamic and engaging interfaces through writing clean code and utilizing cutting-edge development tools and techniques. With a strong foundation in both web and mobile development, I excel at creating user-centric applications that deliver seamless experiences.',
   shortDesc:
     "I bring creativity and technical expertise to every project.",
   favFont: "Barlow",
@@ -73,17 +73,30 @@ export const services = [
 
 
 export const experiences = [
+    {
+    title: "QA Engineer",
+    company: "BCS Technology",
+    type: "Consultant - Full Time",
+    location: "Colombo, Sri Lanka",
+    roles: [
+      "Currently working as a QA Engineer, focusing on automation and quality assurance.",
+    ],
+    // technology: ["Selenium", "Playwright", "Java", "Automation Script","Appium Mobile", "Manual Testing", "Azure DevOps", "CI/CD Workflows", "AWS", "K6", "JIRA", "TestRail", "Test Plan", "Test Case Design", "Test Case Execution"],
+    iconUrl: "/images/logo/bcs-technology.png",
+    date: "Aug 2025 - Present",
+    url: "https://bcstechnology.com.au",
+  },
   {
     title: "Associate Quality Engineer",
     company: "Insighture",
-    type: "Contract - Full Time",
+    type: "Contract",
     location: "Colombo 04, Sri Lanka",
-    roles: [
-      "Currently working as a QA Engineer, focusing on software testing and quality assurance.",
-    ],
-    technology: ["Selenium", "Playwright", "Java", "Automation Script","Appium Mobile", "Manual Testing", "Azure DevOps", "CI/CD Workflows", "AWS", "K6", "JIRA", "TestRail", "Test Plan", "Test Case Design", "Test Case Execution"],
+    // roles: [
+    //   "Currently working as a Associate QA Engineer, focusing on software testing and quality assurance.",
+    // ],
+    technology: ["Selenium", "Java", "TestNG", "UI/ API", "Automation Testing","Appium WebdriverIO", "Manual Testing", "Azure DevOps", "CI/CD Workflows", "AWS", "K6", "JIRA", "TestRail", "Test Plan", "Test Case Design", "Test Case Execution"],
     iconUrl: "/images/logo/INSIGHTURE.png",
-    date: "Jan 2025 - Present",
+    date: "Jan 2025 - July 2025",
     url: "https://www.insighture.com",
   },
   {
