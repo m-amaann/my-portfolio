@@ -1,9 +1,17 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    images: {
-      domains: ['codeelevate.blog', 'secure.gravatar.com'], // Add the external domain here
-    },
-  };
-  
-  module.exports = nextConfig;
-  
+  images: {
+    domains: [
+      // "miro.medium.com",        // modern Medium CDN
+      // 'cdn-images-1.medium.com' // legacy Medium CDN
+    ],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**', // or 'miro.medium.com' for Medium images
+      },
+    ],
+  },
+};
+
+module.exports = nextConfig;

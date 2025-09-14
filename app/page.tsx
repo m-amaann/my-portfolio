@@ -13,9 +13,13 @@ import Header from "@/components/header";
 import Preloader from "@/components/preloader";
 import Services from "@/components/layout/services";
 import Blogs from "@/components/layout/blogs";
+import { getMediumPosts } from "@/lib/getMediumPosts";
+
+export const dynamic = "force-dynamic"; 
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
+
 
   useEffect(() => {
     (async () => {
@@ -45,6 +49,7 @@ export default function Home() {
         <Skills />
         <Projects />
         <Blogs />
+
         {/* <Services /> */}
         <Contact />
       </TracingBeam>
